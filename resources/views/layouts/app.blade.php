@@ -14,7 +14,7 @@
 
 
         
-{{--         <script src="https://cdn.tailwindcss.com"></script> --}}
+{{--      <script src="https://cdn.tailwindcss.com"></script>  --}}
 {{--               <script> --}}
 {{--          tailwind.config = { --}}
 {{--            darkMode: 'class' --}}
@@ -98,7 +98,7 @@
 
 <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-slate-200 sm:translate-x-0 dark:bg-slate-800 dark:border-slate-700" aria-label="Sidebar">
    <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-slate-800">
-      <ul class="space-y-2 font-medium">
+      <ul class="space-y-2">
          <li>
             <a href="{{route("dashboard")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("dashboard") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">
                <svg class="w-5 h-5 text-slate-600 transition duration-75 group-hover:text-slate-900 dark:group-hover:text-slate-100 {{ Request()->routeIs("dashboard") ? "text-slate-900 dark:text-slate-100" : ""}}" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
@@ -117,7 +117,7 @@
             </a>
             </li>
       </ul>
-      <ul class="pt-2 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+      <ul class="pt-2 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
       <li>
                   <a href="{{route("profile.edit")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group  hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("profile.edit") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-slate-600 transition duration-75 group-hover:text-slate-900 dark:group-hover:text-slate-100  {{ Request()->routeIs("profile.edit") ? "text-slate-900 dark:text-slate-100" : ""}}" aria-hidden="true">
                      <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
