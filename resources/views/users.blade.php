@@ -31,7 +31,7 @@
                     {{$user->email}}
                 </td>
                 <td class="px-6 py-4">
-                    {{$user->phone}}
+                    {{$user->phone ? $user->phone : "-"}}
                 </td>
                 
             </tr>
