@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +21,6 @@ Route::get("/", function () {
 })->name("home");
 
 Route::get("/proyek", function () {
-  dd(User::all());
   return view("proyek");
 })->name("proyek");
 
