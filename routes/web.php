@@ -21,6 +21,7 @@ Route::get("/", function () {
 })->name("home");
 
 Route::get("/proyek", function () {
+dd(Auth::user());
   return view("proyek");
 })->name("proyek");
 
