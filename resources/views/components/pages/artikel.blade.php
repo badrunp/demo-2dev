@@ -10,12 +10,12 @@
          </a>
          @endif
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                <div class=" bg-white border border-slate-200 rounded-lg shadow dark:bg-slate-800 dark:border-slate-700">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 sm:gap-6">
+                <div>
             <a href="#">
             <img class="rounded-t-lg" src="{{asset('/images/alivio.jpeg')}}" alt="" />
             </a>
-            <div class="p-5">
+            <div class="pb-2 pt-4">
                <div class="flex items-center gap-4 mb-3">
                   <p class="text-xs text-slate-600 dark:text-slate-400">2 jam yang lalu</p>
                   <p class="text-xs p-[2px] px-2 bg-slate-100 rounded-full text-slate-700 dark:text-slate-700">Teknologi</p>
@@ -33,11 +33,11 @@
                </div>
             </div>
          </div>
-                  <div class="bg-white border border-slate-200 rounded-lg shadow dark:bg-slate-800 dark:border-slate-700">
+                  <div>
             <a href="#">
             <img class="rounded-t-lg" src="{{asset('/images/alivio.jpeg')}}" alt="" />
             </a>
-            <div class="p-5">
+            <div class="pb-2 pt-4">
                <div class="flex items-center gap-4 mb-3">
                   <p class="text-xs text-slate-600 dark:text-slate-400">2 jam yang lalu</p>
                   <p class="text-xs p-[2px] px-2 bg-slate-100 rounded-full text-slate-700 dark:text-slate-700">Teknologi</p>
@@ -55,11 +55,11 @@
                </div>
             </div>
          </div>
-                  <div class="bg-white border border-slate-200 rounded-lg shadow dark:bg-slate-800 dark:border-slate-700">
+                  <div>
             <a href="#">
             <img class="rounded-t-lg" src="{{asset('/images/alivio.jpeg')}}" alt="" />
             </a>
-            <div class="p-5">
+            <div class="pb-2 pt-4">
                <div class="flex items-center gap-4 mb-3">
                   <p class="text-xs text-slate-600 dark:text-slate-400">2 jam yang lalu</p>
                   <p class="text-xs p-[2px] px-2 bg-slate-100 rounded-full text-slate-700 dark:text-slate-700">Teknologi</p>

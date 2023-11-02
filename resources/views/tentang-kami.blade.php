@@ -11,7 +11,7 @@
 </div>
 </section>
 
-<section class="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-700">
+<section class="relative bg-blue-600">
 <div class="py-16 px-4 max-w-4xl w-full mx-auto flex flex flex-col gap-6">
 <h1 class="text-2xl font-semibold text-slate-100">Profil Duos Dev</h1>
 <div class="space-y-2">

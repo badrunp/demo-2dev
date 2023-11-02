@@ -28,7 +28,7 @@
       </script>
    </head>
    <body class=" bg-white dark:bg-slate-950 text-slate-950 dark:text-slate-50 antialiased overflow-x-hidden">
-      <header class="navbar w-full fixed top-0 left-0  z-50 flex items-center justify-center border-slate-200 dark:border-slate-800">
+      <header class="navbar w-full fixed top-0 left-0  z-50 flex items-center justify-center border-slate-200 dark:border-slate-800 {{ Request()->routeIs("home") ? "text-slate-100" : ""}}">
       <div class="w-full max-w-4xl 0 flex items-center justify-between px-4 py-3 sm:py-4">
          <a href="/" class="flex items-center gap-2 shrink">
             <image src="{{ asset('/images/duosdev.png')}}" width="44" height="44" />
@@ -38,7 +38,7 @@
             </div>
          </a>
          <div class="flex items-center gap-4 sm:gap-2 md:gap-4">
-            <nav class="relative hidden sm:block text-slate-700 dark:text-slate-400">
+            <nav class="relative hidden sm:block dark:text-slate-400">
                <ul class="flex items-center gap-1">
                   <li><a href="/proyek" class="py-2 px-1 md:px-2  rounded text-sm xl:text-base"><span>Proyek</span></a></li>
                   <li><a href="/harga" class="py-2 px-1 md:px-2 rounded text-sm xl:text-base"><span>Harga</span></a></li>
@@ -79,7 +79,7 @@
             @endauth
             
             
-            <button id="theme-toggle" type="button" class=" text-slate-950 dark:text-slate-50 rounded-lg text-sm">
+            <button id="theme-toggle" type="button" class="  rounded-lg text-sm">
                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                </svg>
@@ -87,7 +87,7 @@
                   <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                </svg>
             </button>
-            <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center text-sm text-slate-950 rounded-lg sm:hidden focus:outline-none dark:text-slate-50">
+            <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center text-sm  rounded-lg sm:hidden focus:outline-none">
                <span class="sr-only">Open sidebar</span>
                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
@@ -132,13 +132,13 @@
 
             @else
             <div class="truncate hidden sm:flex items-center gap-1 md:gap-2">
-               <a href="{{route("login")}}" class="flex text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-xs px-3 py-2 text-center items-center justify-center rounded-full gap-2">
+               <a href="{{route("login")}}" class="flex text-slate-100 dark:text-slate-700 bg-slate-800  dark:bg-slate-100 focus:outline-none font-medium text-xs px-3 py-2 text-center items-center justify-center rounded-full gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                      <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
                   </svg>
                   <span>Masuk</span>
                </a>
-               <a href="{{route("register")}}" class="py-2 px-3 text-xs font-medium text-slate-900 focus:outline-none bg-white rounded-full border border-slate-200 hover:bg-slate-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 text-center flex items-center justify-center  gap-2">
+               <a href="{{route("register")}}" class="py-2 px-3 text-xs font-medium text-slate-900 focus:outline-none bg-white rounded-full border border-slate-200 hover:bg-slate-100 hover:text-blue-700 focus:z-10 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 text-center flex items-center justify-center  gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                      <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
                   </svg>
@@ -157,7 +157,7 @@
             <div class="h-full px-3 py-4 overflow-y-auto bg-slate-50 dark:bg-slate-950">
                <a href="/" class="flex items-center gap-2 shrink py-2">
                   <image src="{{ asset('/images/duosdev.png')}}" width="44" height="44" />
-                  <div class="flex flex-col justify-center items-start">
+                  <div class="flex flex-col justify-center items-start text-slate-950 dark:text-slate-100">
                      <p class="text-xl font-semibold tracking-wide">Duos Dev</p>
                      <span class="text-[9px] -mt-1 italic">Tech and Solution</span>
                   </div>
@@ -303,8 +303,8 @@
       {{ $slot }}
       @if(!Request()->routeIs("kontak-kami"))
      <section class="bg-blue-600">
-      <div class="flex items-center flex-col justify-center gap-4 py-8 px-6">
-         <div class="flex flex-col items-center justify-center text-slate-100">
+      <div class="flex items-center flex-col justify-center gap-6 py-8 px-6">
+         <div class="flex flex-col items-center justify-center text-slate-100 gap-1">
             <h1 class="text-2xl font-bold">Butuh Bantuan?</h1>
             <p class="text-center text-sm text-slate-200">Jangan ragu untuk menghubungi kami setiap hari 24 jam.</p>
          </div>
@@ -325,27 +325,27 @@
                      <span class="text-[9px] -mt-1 italic">Tech and Solution</span>
                   </div>
                </a>
-               <p class="text-[15px] text-slate-200 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman.</p>
+               <p class="text-[15px] text-slate-200 opacity-80 dark:opacity-100 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman.</p>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 grow">
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm font-medium">Menu</p>
-                  <ul>
+                  <ul >
                      <li>
-                        <a href="{{route("proyek")}}" class="text-slate-200 dark:text-slate-400 text-sm">Proyek</a>
+                        <a href="{{route("proyek")}}" class="text-slate-300 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Proyek</a>
                      </li>
                      <li>
-                        <a href="{{route("harga")}}" class="text-slate-200 dark:text-slate-400 text-sm">Harga</a>
+                        <a href="{{route("harga")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Harga</a>
                      </li>
                      
                      <li>
-                     <a href="{{route("tentang-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm">Tentang Kami</a>
+                     <a href="{{route("tentang-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Tentang Kami</a>
                      </li>
 <li>
-                     <a href="{{route("artikel")}}" class="text-slate-200 dark:text-slate-400 text-sm">Artikel</a>
+                     <a href="{{route("artikel")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Artikel</a>
                      </li>
                      <li>
-                        <a href="{{route("kontak-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm">Kontak Kami</a>
+                        <a href="{{route("kontak-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Kontak Kami</a>
                      </li>
                   </ul>
                </div>
@@ -353,19 +353,19 @@
                   <p class="text-sm font-medium">Kontak</p>
                   <ul>
                      <li>
-                        <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm">Email</a>
+                        <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Email</a>
                      </li>
                      <li>
-                        <a href="https://www.github.com/duosdev" class="text-slate-200 dark:text-slate-400 text-sm">Github</a>
+                        <a href="https://www.github.com/duosdev" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Github</a>
                      </li>
                      <li>
-                        <a href="https://instagram.com/duos_dev?igshid=OGQ5ZDc2ODk2ZA==" class="text-slate-200 dark:text-slate-400 text-sm">Instagram</a>
+                        <a href="https://instagram.com/duos_dev?igshid=OGQ5ZDc2ODk2ZA==" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Instagram</a>
                      </li>
                      <li>
-                        <a href="https://facebook.com/profile.php?id=100088171750481" class="text-slate-200 dark:text-slate-400 text-sm">Facebook</a>
+                        <a href="https://facebook.com/profile.php?id=100088171750481" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Facebook</a>
                      </li>
                      </li>
-                     <a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="text-slate-200 dark:text-slate-400 text-sm">WhatsApp</a>
+                     <a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">WhatsApp</a>
                      </li>
                   </ul>
                </div>
@@ -373,16 +373,16 @@
                   <p class="text-sm font-medium">Legal</p>
                   <ul>
                      <li>
-                        <a href="{{route("kebijakan-privasi")}}" class="text-slate-200 dark:text-slate-400 text-sm">Kebijakan Privasi</a>
+                        <a href="{{route("kebijakan-privasi")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Kebijakan Privasi</a>
                      </li>
                      <li>
-                        <a href="{{route("penggunaan-cookies")}}" class="text-slate-200 dark:text-slate-400 text-sm">Penggunaan Cookies</a>
+                        <a href="{{route("penggunaan-cookies")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Penggunaan Cookies</a>
                      </li>
                   </ul>
                </div>
             </div>
          </div>
-         <p class="text-center text-xs">© 2023 Duos Dev. All Rights Reserved</p>
+         <p class="text-center text-xs opacity-80">© 2023 Duos Dev. All Rights Reserved</p>
          <div class="hidden dark:block bg-gradient-to-tr from-blue-600 via-transparent to-transparent w-[800px] h-[800px] absolute -bottom-[200px] -left-[200px] rounded-full -z-10 blur-3xl opacity-50">
          </div>
          <div class="hidden dark:block bg-blue-600  w-[200px] h-[200px] absolute bottom-[50px] -right-[50px] rounded-full -z-10 blur-3xl opacity-10">
@@ -439,22 +439,34 @@
          window.addEventListener('scroll', function() {
          // current scroll position
          const currentScrollPos = window.pageYOffset;
-         
-         if (prevScrollPos < 60) {
-         // user has scrolled up
-         
          let navbar = document.querySelector('.navbar')
-         navbar.classList.remove('border-b'); 
+         
+         
+         if(currentScrollPos < 40){
+          navbar.classList.remove('border-b'); 
          navbar.classList.remove('bg-white/80');
          navbar.classList.remove('dark:bg-slate-950/80');
          navbar.classList.remove('backdrop-blur-sm');
+         
+         @if(Request()->routeIs("home"))
+         navbar.classList.add('text-slate-100')
+         @endif
+         
+       
+         }else if(prevScrollPos < currentScrollPos) {
+         // user has scrolled up
+         navbar.classList.add("hidden")
+         
+         
          } else {
          // user has scrolled down
-         let navbar = document.querySelector('.navbar')
+
+         navbar.classList.remove("hidden")
          navbar.classList.add('border-b');
          navbar.classList.add('bg-white/80');
          navbar.classList.add('dark:bg-slate-950/80');
          navbar.classList.add('backdrop-blur-sm');
+         navbar.classList.remove('text-slate-100')
          }
          
          // update previous scroll position

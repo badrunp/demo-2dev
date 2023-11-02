@@ -13,12 +13,12 @@
          </div>
          <div id="default-tab-content" class="px-4">
             <div class="hidden" id="profile" role="tabpanel" aria-labelledby="all-tab">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                           <div class="bg-white border border-slate-200 rounded-lg shadow dark:bg-slate-800 dark:border-slate-700">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 sm:gap-6">
+                           <div>
                   <a href="#">
                   <img class="rounded-t-lg" src="{{asset('/images/alivio.jpeg')}}" alt="alivio" />
                   </a>
-                  <div class="p-5">
+                  <div class="pb-2 pt-4">
                      <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Alivio</h5>
                      </a>
@@ -39,11 +39,11 @@
                      </div>
                   </div>
                </div>
-                              <div class="bg-white border border-slate-200 rounded-lg shadow dark:bg-slate-800 dark:border-slate-700">
+                              <div>
                   <a href="#">
                   <img class="rounded-t-lg" src="{{asset('/images/alivio.jpeg')}}" alt="alivio" />
                   </a>
-                  <div class="p-5">
+                  <div class="pb-2 pt-4">
                      <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Alivio</h5>
                      </a>
@@ -64,11 +64,11 @@
                      </div>
                   </div>
                </div>
-                              <div class=" bg-white border border-slate-200 rounded-lg shadow dark:bg-slate-800 dark:border-slate-700">
+                              <div >
                   <a href="#">
                   <img class="rounded-t-lg" src="{{asset('/images/alivio.jpeg')}}" alt="alivio" />
                   </a>
-                  <div class="p-5">
+                  <div class="pb-2 pt-4">
                      <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Alivio</h5>
                      </a>
@@ -92,8 +92,8 @@
             </div>
             </div>
                            @if(!Request()->routeIs("proyek"))
-               <a href="{{route("proyek")}}" class="mt-8 flex items-center gap-2 text-sm text-slate-100 bg-blue-600 rounded-full px-6 py-2 w-max mx-auto focus:outline-none focus:ring-4">
-            <span>Lihat Semua</span>
+               <a href="{{route("proyek")}}" class="w-max mt-10 flex items-center gap-2 text-sm text-blue-600 text-center mx-auto">
+            <span>Lihat semua proyek</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
