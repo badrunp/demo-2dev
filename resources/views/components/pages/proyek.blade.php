@@ -7,7 +7,7 @@
          <div class="mb-4 border-b border-slate-200 dark:border-slate-700 sm:px-4">
             <ul class="hide-scroll flex flex-nowrap -mb-px text-sm font-medium text-center overflow-x-scroll" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
                <li class="mr-2" role="presentation">
-                  <button class="w-max inline-block p-4 border-b-2 rounded-t-lg" id="profil-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Semua Proyek</button>
+                  <button class="w-max inline-block p-4 border-b-2 rounded-t-lg " id="profil-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Semua Proyek</button>
                </li>
             </ul>
          </div>
@@ -92,7 +92,7 @@
             </div>
             </div>
                            @if(!Request()->routeIs("proyek"))
-               <a href="{{route("proyek")}}" class="mt-8 flex items-center gap-2 text-sm text-slate-100 bg-blue-600 rounded-full px-6 py-2 w-max mx-auto">
+               <a href="{{route("proyek")}}" class="mt-8 flex items-center gap-2 text-sm text-slate-100 bg-blue-600 rounded-full px-6 py-2 w-max mx-auto focus:outline-none focus:ring-4">
             <span>Lihat Semua</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />

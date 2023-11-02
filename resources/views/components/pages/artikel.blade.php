@@ -2,7 +2,7 @@
       <div class="flex items-center justify-between gap-4">
          <h1 class="text-2xl font-semibold">Artikel Terbaru</h1>
          @if(!Request()->routeIs("artikel"))
-         <a href="{{route("artikel")}}" class="flex items-center gap-1 text-xs text-slate-100 bg-blue-600 rounded-full px-2.5 py-1.5">
+         <a href="{{route("artikel")}}" class="flex items-center gap-1 text-xs text-blue-600 focus:underline">
             <span>Lihat Semua</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />

@@ -10,12 +10,12 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
      
-{{--       <script src="https://cdn.tailwindcss.com"></script> --}}
-{{--       <script> --}}
-{{--          tailwind.config = { --}}
-{{--            darkMode: 'class' --}}
-{{--          } --}}
-{{--       </script> --}}
+      <script src="https://cdn.tailwindcss.com"></script> 
+       <script>
+         tailwind.config = {
+           darkMode: 'class' 
+     } 
+     </script> 
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
       <script>
@@ -27,7 +27,7 @@
          }
       </script>
    </head>
-   <body class="bg-white dark:bg-slate-950 text-slate-950 dark:text-slate-50 antialiased overflow-x-hidden">
+   <body class=" bg-white dark:bg-slate-950 text-slate-950 dark:text-slate-50 antialiased overflow-x-hidden">
       <header class="navbar w-full fixed top-0 left-0  z-50 flex items-center justify-center border-slate-200 dark:border-slate-800">
       <div class="w-full max-w-4xl 0 flex items-center justify-between px-4 py-3 sm:py-4">
          <a href="/" class="flex items-center gap-2 shrink">
@@ -147,7 +147,7 @@
             </div>
             @endif
          </div>
-         <aside id="logo-sidebar" class="fixed sm:hidden top-0 left-0 z-[100] w-72 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+         <aside id="logo-sidebar" class="bg-white fixed sm:hidden top-0 left-0 z-[100] w-72 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
             <button type="button" data-drawer-hide="logo-sidebar" aria-controls="drawer-navigation" class="text-slate-700 dark:text-slate-400 rounded text-sm absolute top-2.5 right-2.5 inline-flex items-center p-1.5 rounded" >
                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -302,7 +302,7 @@
       </header>
       {{ $slot }}
       @if(!Request()->routeIs("kontak-kami"))
-     <section class="bg-blue-700 ">
+     <section class="bg-blue-600">
       <div class="flex items-center flex-col justify-center gap-4 py-8 px-6">
          <div class="flex flex-col items-center justify-center text-slate-100">
             <h1 class="text-2xl font-bold">Butuh Bantuan?</h1>
@@ -314,7 +314,7 @@
       </div>
    </section>
    @endif
-      <footer class="relative border-t border-blue-900 dark:border-slate-700 overflow-hidden bg-blue-800 dark:bg-transparent text-white">
+      <footer class="relative border-t border-blue-700 dark:border-slate-700 overflow-hidden bg-blue-700 dark:bg-transparent text-white">
       <div class="px-4 py-16 flex flex-col gap-16 max-w-4xl mx-auto">
          <div class="flex flex-col md:flex-row gap-6">
             <div class="flex flex-col gap-3 max-w-sm">
@@ -389,7 +389,7 @@
          </div>
          </div>
       </footer>
-{{--       <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>  --}}
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script> 
       <script> 
          var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
          var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');

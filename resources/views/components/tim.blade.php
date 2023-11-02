@@ -1,4 +1,4 @@
-   <section class="{{ Request()->routeIs('tentang-kami') ? '' : 'bg-gradient-to-r from-blue-600 via-blue-700 to-blue-700'}} ">
+   <section class="{{ Request()->routeIs('tentang-kami') ? '' : 'bg-blue-600'}} ">
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
       <div class="px-4 flex items-center flex-col gap-4">
          <h1 class=" text-2xl font-semibold text-center {{ Request()->routeIs('tentang-kami') ? '' : 'text-slate-100' }}">Tim Kami</h1>

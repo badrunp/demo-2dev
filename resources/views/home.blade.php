@@ -12,7 +12,7 @@
          </a>
       </div>
    </section>
-   <section class=" bg-gradient-to-r from-blue-600 via-blue-700 to-blue-700  px-4 py-16">
+   <section class=" bg-blue-600  px-4 py-16">
       <div class=" flex flex-col gap-4 max-w-4xl mx-auto">
          <h1 class="text-2xl font-semibold text-center text-slate-100">Tentang Kami</h1>
          <p class="text-sm text-slate-200">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman. Dengan bermodal pengetahuan dan jam terbang yang kami miliki, kami siap menjawab kebutuhan masyarakat terlebih untuk perusahaan dalam pembuatan website untuk kemajuan usahanya.</p>
@@ -88,7 +88,7 @@
       </div>
    </section>
   <x-pages.harga/>
-   <section class=" bg-gradient-to-r from-blue-600 via-blue-700 to-blue-700">
+   <section class=" bg-blue-600">
       <div class="px-4 py-16 flex flex-col gap-4 overflow-x-hidden max-w-4xl mx-auto">
          <div class="relative">
             <div class="translate-x-4 sm:translate-x-16">
@@ -151,7 +151,7 @@
          </div>
       </div>
    </section>
-   <section class=" bg-gradient-to-r from-blue-600 via-blue-700 to-blue-700">
+   <section class=" bg-blue-600">
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
          <div class="flex items-center flex-col gap-4">
             <h1 class="text-2xl font-semibold text-center text-slate-100">Testimoni Dari Klien</h1>
