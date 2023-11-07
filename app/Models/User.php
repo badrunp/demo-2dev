@@ -26,6 +26,7 @@ class User extends Authenticatable
     "github_url",
     "linkedin_url",
     "photo",
+    "jabatan"
   ];
 
   /**

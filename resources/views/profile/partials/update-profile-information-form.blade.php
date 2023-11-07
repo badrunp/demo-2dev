@@ -47,9 +47,15 @@
             @endif
         </div>
                 <div>
-            <x-input-label for="role" :value="__('Role')" />
+            <x-input-label for="role" :value="__('Akses')" />
             <x-text-input id="role" name="role" type="text" class="mt-1 block w-full opacity-50" :value="old('role', $user->role)" required autocomplete="username" readonly />
             <x-input-error class="mt-2" :messages="$errors->get('role')" />
+            </div>
+            
+                            <div>
+            <x-input-label for="jabatan" :value="__('Jabatan')" />
+            <x-text-input id="jabatan" name="jabatan" type="text" class="mt-1 block w-full" :value="old('jabatan', $user->jabatan)" required autocomplete="username"  />
+            <x-input-error class="mt-2" :messages="$errors->get('jabatan')" />
             </div>
             
                         <div>

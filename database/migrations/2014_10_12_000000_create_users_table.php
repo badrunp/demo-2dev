@@ -21,6 +21,7 @@ return new class extends Migration {
       $table->string("github_url")->nullable();
       $table->string("linkedin_url")->nullable();
       $table->string("photo")->nullable();
+      $table->string("jabatan")->nullable();
       $table->rememberToken();
       $table->timestamps();
     });

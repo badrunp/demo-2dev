@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\api\PacketController;
+use App\Http\Controllers\api\FeatureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware("auth:sanctum")->get("/user", function (Request $request) {
+  return $request->user();
+});
+
+Route::prefix("packets")->group(function () {
+  Route::get("/", [PacketController::class, "findAll"])->name(
+    "api.packets.findAll"
+  );
+  Route::get("/{id}", [PacketController::class, "findById"])->name(
+    "api.packets.findById"
+  );
+});
+
+Route::prefix("features")->group(function(){
+ Route::get("/", [FeatureController::class, "findAll"])->name("api.features.findAll");
 });

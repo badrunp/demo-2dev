@@ -20,6 +20,7 @@ class ProfileUpdateRequest extends FormRequest
       "phone" => ["nullable", "string", "min:12", "max:13", Rule::unique(User::class)->ignore($this->user()->id)],
       "github_url" => ["nullable", "string", "url:http,https", "max:255"],
       "linkedin_url" => ["nullable", "string", "url:http,https", "max:255"],
+      "jabatan" => ["nullable", "min:3", "max:20"]
     ];
   }
 }

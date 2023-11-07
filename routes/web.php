@@ -3,6 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PacketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,6 +58,11 @@ Route::get("/dashboard", DashboardController::class)
 
 Route::middleware("auth")->group(function () {
   Route::resource("users", UserController::class);
+  Route::resource("products", ProductController::class);
+  Route::resource("services", ServiceController::class);
+  Route::resource("packets", PacketController::class);
+  
+  Route::resource("features", FeatureController::class);
 
   Route::get("/profile", [ProfileController::class, "edit"])->name(
     "profile.edit"
