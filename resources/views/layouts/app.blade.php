@@ -121,6 +121,46 @@
                <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
             </a>
             </li>
+                              <li>
+            <a href="{{route("testimonis.index")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("testimonis.index") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">
+              
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-slate-600 transition duration-75 group-hover:text-slate-900 dark:group-hover:text-slate-100  {{ Request()->routeIs("testimonis.index") ? "text-slate-900 dark:text-slate-100" : ""}}">
+  <path fill-rule="evenodd" d="M5.337 21.718a6.707 6.707 0 01-.533-.074.75.75 0 01-.44-1.223 3.73 3.73 0 00.814-1.686c.023-.115-.022-.317-.254-.543C3.274 16.587 2.25 14.41 2.25 12c0-5.03 4.428-9 9.75-9s9.75 3.97 9.75 9c0 5.03-4.428 9-9.75 9-.833 0-1.643-.097-2.417-.279a6.721 6.721 0 01-4.246.997z" clip-rule="evenodd" />
+</svg>
+
+               <span class="flex-1 ml-3 whitespace-nowrap">Testimoni</span>
+            </a>
+            </li>
+                                          <li>
+            <a href="{{route("faqs.index")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("faqs.index") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">
+
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-slate-600 transition duration-75 group-hover:text-slate-900 dark:group-hover:text-slate-100  {{ Request()->routeIs("faqs.index") ? "text-slate-900 dark:text-slate-100" : ""}}">
+  <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 01-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 01-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 01-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584zM12 18a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
+</svg>
+
+               <span class="flex-1 ml-3 whitespace-nowrap">Faq</span>
+            </a>
+            </li>
+                                                      <li>
+            <a href="{{route("benefits.index")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("benefits.index") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-slate-600 transition duration-75 group-hover:text-slate-900 dark:group-hover:text-slate-100  {{ Request()->routeIs("benefits.index") ? "text-slate-900 dark:text-slate-100" : ""}}">
+  <path fill-rule="evenodd" d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z" clip-rule="evenodd" />
+</svg>
+
+               <span class="flex-1 ml-3 whitespace-nowrap">Why</span>
+            </a>
+            </li>
+                                                                  <li>
+            <a href="{{route("teams.index")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("teams.index") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-slate-600 transition duration-75 group-hover:text-slate-900 dark:group-hover:text-slate-100  {{ Request()->routeIs("teams.index") ? "text-slate-900 dark:text-slate-100" : ""}}">
+  <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd" />
+  <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
+</svg>
+
+
+               <span class="flex-1 ml-3 whitespace-nowrap">Tim Kami</span>
+            </a>
+            </li>
       </ul>
          <div class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
          <span class="text-xs tracking-wider uppercase text-slate-500 dark:text-slate-500">Layanan</span>

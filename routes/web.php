@@ -10,6 +10,11 @@ use App\Http\Controllers\PacketController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PriceController;
+use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\BenefitController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +39,7 @@ Route::get("/artikel", function () {
   return view("artikel");
 })->name("artikel");
 
-Route::get("/tentang-kami", function () {
-  return view("tentang-kami");
-})->name("tentang-kami");
+Route::get("/tentang-kami", AboutController::class)->name("tentang-kami");
 
 Route::get("/kontak-kami", function () {
   return view("kontak-kami");
@@ -59,8 +62,11 @@ Route::middleware("auth")->group(function () {
   Route::resource("products", ProductController::class);
   Route::resource("services", ServiceController::class);
   Route::resource("packets", PacketController::class);
-
+  Route::resource("testimonis", TestimoniController::class);
   Route::resource("features", FeatureController::class);
+  Route::resource("faqs", FaqController::class);
+  Route::resource("benefits", BenefitController::class);
+  Route::resource("teams", TeamController::class);
 
   Route::get("/profile", [ProfileController::class, "edit"])->name(
     "profile.edit"

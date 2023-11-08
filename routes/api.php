@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\PacketController;
 use App\Http\Controllers\api\FeatureController;
+use App\Http\Controllers\api\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,17 @@ Route::prefix("packets")->group(function () {
   );
 });
 
-Route::prefix("features")->group(function(){
- Route::get("/", [FeatureController::class, "findAll"])->name("api.features.findAll");
+Route::prefix("features")->group(function () {
+  Route::get("/", [FeatureController::class, "findAll"])->name(
+    "api.features.findAll"
+  );
+});
+
+Route::prefix("users")->group(function () {
+  Route::get("/admin", [UserController::class, "findAllAdmin"])->name(
+    "api.users.findAllAdmin"
+  );
+  Route::get("/{id}", [UserController::class, "findById"])->name(
+    "api.users.findById"
+  );
 });

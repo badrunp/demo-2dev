@@ -42,6 +42,6 @@
 </div>
 </div>
 </section>
-<x-tim/>
+<x-tim :data="$teams"/>
 </div>
 </x-guest-layout>
