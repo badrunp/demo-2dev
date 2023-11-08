@@ -16,7 +16,7 @@ class PacketController extends Controller
 
   public function findById($id)
   {
-    $data = Packet::select(["price"])->find($id);
+    $data = Packet::find($id);
     return response()->json($data);
   }
 }

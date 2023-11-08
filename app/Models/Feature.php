@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Feature extends Model
 {
   use HasFactory;
-  
-  protected $with = ["products"];
+
+  protected $with = [];
 
   protected $fillable = ["name", "desc"];
 

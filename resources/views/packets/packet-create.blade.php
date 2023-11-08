@@ -48,11 +48,6 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
        
-       <div class="mb-4">
-            <x-input-label for="price" :value="__('Harga')" />
-            <x-text-input id="price" class="block mt-1 w-full" type="number" name="price" :value="old('price')" autofocus/>
-            <x-input-error :messages="$errors->get('price')" class="mt-2" />
-        </div>
         
        <div class="mb-4">
                    <x-input-label for="desc" :value="__('Deskripsi')" class="mb-2" />

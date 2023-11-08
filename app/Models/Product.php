@@ -11,11 +11,12 @@ class Product extends Model
 {
   use HasFactory;
 
-  protected $with = ["features", "packet", "service"];
+  protected $with = ["packet", "service"];
 
   protected $fillable = [
     "status",
     "discount",
+    "price",
     "banner",
     "packet_id",
     "service_id",
@@ -33,6 +34,6 @@ class Product extends Model
 
   public function features(): BelongsToMany
   {
-    return $this->belongsToMany(Feature::class);
+    return $this->belongsToMany(Feature::class)->withPivot("is_checked");
   }
 }

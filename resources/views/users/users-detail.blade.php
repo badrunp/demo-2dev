@@ -34,42 +34,42 @@
 </nav>
 
 <div class="mb-8">
-<h1 class="text-2xl font-medium">User Detail</h1>
+<h1 class="text-2xl font-medium">Detail User {{$user->name}}</h1>
 </div>
 
 
 <dl class="mb-6 max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
     <div class="flex flex-col pb-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Nama</dt>
-        <dd class="text-lg font-semibold">{{$user->name}}</dd>
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Nama</dt>
+        <dd class="text-base font-semibold">{{$user->name}}</dd>
     </div>
-        <div class="flex flex-col pt-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Jabatan</dt>
-        <dd class="text-lg font-semibold">{{$user->jabatan ? $user->jabatan : "-"}}</dd>
+        <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Jabatan</dt>
+        <dd class="text-base font-semibold">{{$user->jabatan ? $user->jabatan : "-"}}</dd>
     </div>
     <div class="flex flex-col py-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Nomor HP</dt>
-        <dd class="text-lg font-semibold">{{$user->phone ? $user->phone : "-"}}</dd>
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Nomor HP</dt>
+        <dd class="text-base font-semibold">{{$user->phone ? $user->phone : "-"}}</dd>
     </div>
-    <div class="flex flex-col pt-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Github URL</dt>
-        <dd class="text-lg font-semibold">{{$user->github_url ? $user->github_url : "-"}}</dd>
+    <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Github URL</dt>
+        <dd class="text-base font-semibold">{{$user->github_url ? $user->github_url : "-"}}</dd>
     </div>
-        <div class="flex flex-col pt-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Linkedin URL</dt>
-        <dd class="text-lg font-semibold">{{$user->linkedin_url ? $user->linkedin_url : "-"}}</dd>
+        <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Linkedin URL</dt>
+        <dd class="text-base font-semibold">{{$user->linkedin_url ? $user->linkedin_url : "-"}}</dd>
     </div>
-        <div class="flex flex-col pt-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Email</dt>
-        <dd class="text-lg font-semibold">{{$user->email ? $user->email : "-"}}</dd>
+        <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Email</dt>
+        <dd class="text-base font-semibold">{{$user->email ? $user->email : "-"}}</dd>
     </div>
-        <div class="flex flex-col pt-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Akses</dt>
-        <dd class="text-lg font-semibold">{{$user->role ? $user->role : "-"}}</dd>
+        <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Akses</dt>
+        <dd class="text-base font-semibold">{{$user->role ? $user->role : "-"}}</dd>
     </div>
-        <div class="flex flex-col pt-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Bergabung Pada</dt>
-        <dd class="text-lg font-semibold">{{$user->created_at ? $user->created_at : "-"}}</dd>
+        <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Bergabung Pada</dt>
+        <dd class="text-base font-semibold">{{$user->created_at ? $user->created_at : "-"}}</dd>
     </div>
 </dl>
 

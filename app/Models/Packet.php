@@ -9,5 +9,5 @@ class Packet extends Model
 {
   use HasFactory;
 
-protected $fillable = ["name", "price", "desc"];
+protected $fillable = ["name", "desc"];
 }

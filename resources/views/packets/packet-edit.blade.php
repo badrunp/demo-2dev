@@ -48,12 +48,6 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
         
-                        <div class="mb-4">
-            <x-input-label for="price" :value="__('Harga')" />
-            <x-text-input id="price" class="block mt-1 w-full" type="number" name="price" :value="old('price', $packet->price)" autofocus/>
-            <x-input-error :messages="$errors->get('price')" class="mt-2" />
-        </div>
-        
        <div class="mb-4">
                    <x-input-label for="desc" :value="__('Deskripsi')" class="mb-2" />
 <textarea id="message" rows="4" name="desc" class="block p-2.5 w-full text-sm text-slate-900 border-slate-300 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 focus:border-blue-500 dark:focus:border-blue-600 focus:ring-blue-500 dark:focus:ring-blue-600 rounded-md shadow-sm" placeholder="Tulis deskripsi disini...">{{old("desc", $packet->desc)}}</textarea>

@@ -34,22 +34,22 @@
 </nav>
 
 <div class="mb-8">
-<h1 class="text-2xl font-medium">Fitur {{$feature->name}} Detail</h1>
+<h1 class="text-2xl font-medium">Detail Fitur {{$feature->name}}</h1>
 </div>
 
 
 <dl class="mb-6 max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
     <div class="flex flex-col pb-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Nama</dt>
-        <dd class="text-lg font-semibold">{{$feature->name}}</dd>
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Nama</dt>
+        <dd class="text-base font-semibold">{{$feature->name}}</dd>
     </div>
-        <div class="flex flex-col pt-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Deskripsi</dt>
-        <dd class="text-lg font-semibold">{{$feature->desc ? $feature->desc : "-"}}</dd>
+        <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Deskripsi</dt>
+        <dd class="text-base font-semibold">{{$feature->desc ? $feature->desc : "-"}}</dd>
     </div>
-        <div class="flex flex-col pt-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Dibuat Pada</dt>
-        <dd class="text-lg font-semibold">{{$feature->created_at ? $feature->created_at : "-"}}</dd>
+        <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Dibuat Pada</dt>
+        <dd class="text-base font-semibold">{{$feature->created_at ? $feature->created_at : "-"}}</dd>
     </div>
 </dl>
 

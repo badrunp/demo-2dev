@@ -20,6 +20,7 @@ return new class extends Migration {
         ->nullable()
         ->default(0);
       $table->string("banner")->nullable();
+      $table->integer("price");
 
       $table->unsignedBiginteger("packet_id")->unsigned();
       $table->unsignedBiginteger("service_id")->unsigned();

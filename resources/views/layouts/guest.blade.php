@@ -10,12 +10,12 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
      
-{{--       <script src="https://cdn.tailwindcss.com"></script>  --}}
-{{--        <script> --}}
-{{--          tailwind.config = { --}}
-{{--            darkMode: 'class'  --}}
-{{--      }  --}}
-     </script> 
+{{--      <script src="https://cdn.tailwindcss.com"></script>   --}}
+{{--       <script>  --}}
+{{--         tailwind.config = {  --}}
+{{--            darkMode: 'class'   --}}
+{{--       }   --}}
+{{--      </script>  --}}
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
       <script>
@@ -94,7 +94,7 @@
                </svg>
             </button>
             @if(Auth::check())
-            <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="hidden sm:flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 dark:text-white" type="button">
+            <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="hidden sm:flex items-center text-sm font-medium rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 dark:text-white" type="button">
     <span class="sr-only">Open user menu</span>
 <div class="relative w-8 h-8 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 mr-2">
     <svg class="absolute w-10 h-10 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
@@ -389,7 +389,7 @@
          </div>
          </div>
       </footer>
-{{--      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>  --}}
+{{--      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>  --}} 
       <script> 
          var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
          var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');

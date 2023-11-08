@@ -64,6 +64,9 @@
                                 <th scope="col" class="px-6 py-3">
                     Nama Paket
                 </th>
+                                 <th scope="col" class="px-6 py-3">
+                    Harga
+                </th>
                  <th scope="col" class="px-6 py-3">
                     Status
                 </th>
@@ -89,7 +92,9 @@
                 <td class="px-6 py-4">
                  {{$product->packet->name}}
                  </td>
-                 
+                                 <td class="px-6 py-4">
+                 {{$product->price}}
+                 </td>
                 <td class="px-6 py-4">
                 @if($product->status == "published")
                  <span class="text-green-600">Published</span>
@@ -175,7 +180,7 @@
             @endforeach
             @else
             <tr class="bg-white border-b dark:bg-slate-900 dark:border-slate-700">
-              <td class="px-6 py-4 text-sm text-slate-700 dark:text-slate-400" colspan="5">
+              <td class="px-6 py-4 text-sm text-slate-700 dark:text-slate-400" colspan="6">
               <p class="text-center">Belum ada data.</p>
               </td>
             </tr>

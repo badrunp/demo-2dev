@@ -36,64 +36,20 @@
          <span class="text-sm text-slate-700 dark:text-slate-400">Mau membuat website apa? Duos Dev solusi lengkap dalam pembuatan website untuk perusahaan atau perorangan, dengan tampilan yang responsive, serta layanan marketing untuk website Anda.</span>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-         <div class="p-4 bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100 mb-3">
-               <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-            </svg>
-            <a href="#">
-               <h5 class="mb-2 text-base font-medium tracking-tight text-slate-100">Website Profil Perusahaan</h5>
-            </a>
-            <p class="text-sm mb-3 font-normal text-slate-100">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
-         </div>
-         <div class="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100 mb-3">
-               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
-            </svg>
-            <a href="#">
-               <h5 class="mb-2 text-base font-medium tracking-tight text-slate-100">Website Toko Online</h5>
-            </a>
-            <p class="text-sm mb-3 font-normal text-slate-100">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
-         </div>
+       @foreach($products as $service)
          <div class="p-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100 mb-3">
-               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-            </svg>
-            <a href="#">
-               <h5 class="mb-2 text-base font-medium tracking-tight text-slate-100">Website Undangan</h5>
-            </a>
-            <p class="text-sm mb-3 font-normal text-slate-100">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
+            
+                    <image src="{{asset("storage/" . $service[0]->service->photo)}}" alt="{{$service[0]->service->name}}" class="w-10 h-10 rounded-full mb-3" />
+        </dd>
+            
+               <h5 class="mb-1 text-base font-medium tracking-tight text-slate-100">{{$service[0]->service->name}}</h5>
+            
+            <p class="text-sm mb-3 font-normal text-slate-100">{{$service[0]->service->desc}}</p>
          </div>
-         <div class="p-4 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100 mb-3">
-               <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-            </svg>
-            <a href="#">
-               <h5 class="mb-2 text-base font-medium tracking-tight text-slate-100">Landing Page</h5>
-            </a>
-            <p class="text-sm mb-3 font-normal text-slate-100">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
-         </div>
-         <div class="p-4 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100 mb-3">
-               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-            </svg>
-            <a href="#">
-               <h5 class="mb-2 text-base font-medium tracking-tight text-slate-100">Website Pemerintahan</h5>
-            </a>
-            <p class="text-sm mb-3 font-normal text-slate-100">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
-         </div>
-         <div class="p-4 bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100 mb-3">
-               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-            </svg>
-            <a href="#">
-               <h5 class="mb-2 text-base font-medium tracking-tight text-slate-100">UI/UX</h5>
-            </a>
-            <p class="text-sm mb-3 font-normal text-slate-100">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
-         </div>
+         @endforeach
       </div>
    </section>
-  <x-pages.harga/>
+  <x-pages.harga :data="$products" />
    <section class=" bg-blue-600">
       <div class="px-4 py-16 flex flex-col gap-4 overflow-x-hidden max-w-4xl mx-auto">
          <div class="relative">

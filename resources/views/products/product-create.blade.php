@@ -56,7 +56,7 @@
       <div class="mb-4 grid grid-cols-2 gap-2">
          <div>
             <x-input-label for="price" :value="__('Harga')" />
-            <x-text-input id="price" class="block mt-1 w-full" type="number" name="price" :value="old('price')" placeholder="Terisi otomatis" readOnly
+            <x-text-input id="price" class="block mt-1 w-full" type="number" name="price" :value="old('price')"
                />
             <x-input-error :messages="$errors->get('price')" class="mt-2" />
          </div>
@@ -166,22 +166,12 @@
              }
             }
            }
-          }).on('select2:select', function (e) {
-          var id = e.params.data.id;
-          $.ajax({
-           url: "{{ route("api.packets.findAll")}}/" + id,
-           type: "GET",
-           dataType: "JSON",
-           success: function(data){
-            $("#price").val(data.price)
-           }
           })
-      });;
       });
        
       let no_feature = {{ session()->has("no_features") ? session()->get("no_features") : 0 }};
       function addRowFeatur(){
-       alert(no_feature)
+       
         
         $("#feature-list-table").find("tbody")
           .append(`<tr class="bg-white dark:bg-slate-800">

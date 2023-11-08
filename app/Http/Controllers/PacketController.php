@@ -13,7 +13,7 @@ class PacketController extends Controller /**
   {
     $search = $request->query("search");
     $data = [
-      "packets" => Packet::select(["id", "name", "desc", "price"])
+      "packets" => Packet::select(["id", "name", "desc"])
         ->when($search, function (Builder $query, string $search) {
           $query->where("name", "like", "%" . $search . "%");
         })
@@ -38,7 +38,6 @@ class PacketController extends Controller /**
     $data = $request->validate([
       "name" => ["required", "string", "min:3", "max:20"],
       "desc" => ["required", "string", "min:3"],
-      "price" => ["required", "integer"],
     ]);
 
     Packet::create($data);
@@ -54,14 +53,9 @@ class PacketController extends Controller /**
    */
   public function show(Request $request, Packet $packet)
   {
-    return response()->json(["test" => $request->ajax()]);
-    $data = ["packet" => $packet];
+    
 
-    if ($request->ajax()) {
-      return response()->json($data);
-    }
-
-    return view("packets.packet-detail", $data);
+    return view("packets.packet-detail", compact("packet"));
   }
 
   /**
@@ -80,7 +74,6 @@ class PacketController extends Controller /**
     $data = $request->validate([
       "name" => ["required", "string", "min:3", "max:20"],
       "desc" => ["required", "string", "min:3"],
-      "price" => ["required", "integer"],
     ]);
 
     $packet->update($data);

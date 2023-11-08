@@ -62,9 +62,6 @@
                     Nama
                 </th>
                                 <th scope="col" class="px-6 py-3">
-                    Harga
-                </th>
-                                <th scope="col" class="px-6 py-3">
                     Aksi
                 </th>
             </tr>
@@ -82,9 +79,7 @@
 
                    
                 </th>
-                                <td class="px-6 py-4">
-                                {{$packet->price}}
-                                </td>
+
              
                 <td class="px-6 py-4">
                 

@@ -8,6 +8,8 @@ use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PacketController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PriceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,17 +22,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/", function () {
-  return view("home");
-})->name("home");
+Route::get("/", HomeController::class)->name("home");
 
 Route::get("/proyek", function () {
   return view("proyek");
 })->name("proyek");
 
-Route::get("/harga", function () {
-  return view("harga");
-})->name("harga");
+Route::get("/harga", PriceController::class)->name("harga");
 
 Route::get("/artikel", function () {
   return view("artikel");
@@ -61,7 +59,7 @@ Route::middleware("auth")->group(function () {
   Route::resource("products", ProductController::class);
   Route::resource("services", ServiceController::class);
   Route::resource("packets", PacketController::class);
-  
+
   Route::resource("features", FeatureController::class);
 
   Route::get("/profile", [ProfileController::class, "edit"])->name(
