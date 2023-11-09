@@ -17,7 +17,7 @@
          <h1 class="text-2xl font-semibold text-center">Tentang Kami</h1>
          <p class="text-sm text-slate-700 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman. Dengan bermodal pengetahuan dan jam terbang yang kami miliki, kami siap menjawab kebutuhan masyarakat terlebih untuk perusahaan dalam pembuatan website untuk kemajuan usahanya.</p>
          <a href="{{route("tentang-kami")}}" class="mt-2 w-max ml-auto md:ml-0 text-sm font-medium text-blue-600 flex items-center gap-2 focus:underline hover:underline">
-            <span>Selengkapan</span>
+            <span>Selengkapnya</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
             </svg>
@@ -166,7 +166,7 @@
           @foreach($faqs as $key => $faq)
           
             <h2 id="accordion-flush-heading-{{$key}}">
-               <button type="button" class="flex items-center justify-between w-full py-5 text-left text-slate-700 border-b border-slate-200 dark:border-slate-700 dark:text-slate-400" data-accordion-target="#accordion-flush-body-{{$key}}" aria-expanded="{{ $key == 0 ? 'true' : 'false'}}" aria-controls="accordion-flush-body-{{$key}}">
+               <button type="button" class="flex items-center justify-between w-full py-5 text-left text-slate-700 border-b border-slate-200 dark:border-slate-700 dark:text-slate-400 px-2" data-accordion-target="#accordion-flush-body-{{$key}}" aria-expanded="{{ $key == 0 ? 'true' : 'false'}}" aria-controls="accordion-flush-body-{{$key}}">
                   <span>{{$faq->pertanyaan}}</span>
                   <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>

@@ -10,11 +10,11 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
      
-{{--       <script src="https://cdn.tailwindcss.com"></script>    --}}
-{{--        <script>   --}}
-{{--          tailwind.config = {   --}}
-{{--          darkMode: 'class'    --}}
-{{--       }    --}}
+       <script src="https://cdn.tailwindcss.com"></script>    
+        <script>   
+          tailwind.config = {   
+          darkMode: 'class'    
+       }    
       </script>  
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -302,7 +302,7 @@
       </header>
       {{ $slot }}
       @if(!Request()->routeIs("kontak-kami"))
-     <section class="bg-blue-600">
+     <section class="bg-blue-800">
       <div class="flex items-center flex-col justify-center gap-6 py-8 px-6">
          <div class="flex flex-col items-center justify-center text-slate-100 gap-1">
             <h1 class="text-2xl font-bold">Butuh Bantuan?</h1>
