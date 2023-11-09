@@ -100,7 +100,7 @@
 </nav>
 
 <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-slate-200 sm:translate-x-0 dark:bg-slate-800 dark:border-slate-700" aria-label="Sidebar">
-   <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-slate-800">
+   <div class="h-full px-3 pb-20 overflow-y-scroll bg-white dark:bg-slate-800">
       <ul class="space-y-2">
          <li>
             <a href="{{route("dashboard")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("dashboard") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">
@@ -121,6 +121,10 @@
                <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
             </a>
             </li>
+            </ul>
+                     <div class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
+         <span class="text-xs tracking-wider uppercase text-slate-500 dark:text-slate-500">Content Management</span>
+         <ul class="space-y-2">
                               <li>
             <a href="{{route("testimonis.index")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("testimonis.index") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">
               
@@ -162,6 +166,7 @@
             </a>
             </li>
       </ul>
+      </div>
          <div class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
          <span class="text-xs tracking-wider uppercase text-slate-500 dark:text-slate-500">Layanan</span>
          <ul class="space-y-2">
@@ -210,7 +215,23 @@
          </ul>
          </div>
          
+         <div class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
+         <span class="text-xs tracking-wider uppercase text-slate-500 dark:text-slate-500">Artikel</span>
+         <ul class="space-y-2">
+         <li>
+                           <a href="{{route("products.index")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("products.index") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">
 
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-slate-600 transition duration-75 group-hover:text-slate-900 dark:group-hover:text-slate-100 {{ Request()->routeIs("products.index") ? "text-slate-900 dark:text-slate-100" : ""}}">
+  <path d="M5.223 2.25c-.497 0-.974.198-1.325.55l-1.3 1.298A3.75 3.75 0 007.5 9.75c.627.47 1.406.75 2.25.75.844 0 1.624-.28 2.25-.75.626.47 1.406.75 2.25.75.844 0 1.623-.28 2.25-.75a3.75 3.75 0 004.902-5.652l-1.3-1.299a1.875 1.875 0 00-1.325-.549H5.223z" />
+  <path fill-rule="evenodd" d="M3 20.25v-8.755c1.42.674 3.08.673 4.5 0A5.234 5.234 0 009.75 12c.804 0 1.568-.182 2.25-.506a5.234 5.234 0 002.25.506c.804 0 1.567-.182 2.25-.506 1.42.674 3.08.675 4.5.001v8.755h.75a.75.75 0 010 1.5H2.25a.75.75 0 010-1.5H3zm3-6a.75.75 0 01.75-.75h3a.75.75 0 01.75.75v3a.75.75 0 01-.75.75h-3a.75.75 0 01-.75-.75v-3zm8.25-.75a.75.75 0 00-.75.75v5.25c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-5.25a.75.75 0 00-.75-.75h-3z" clip-rule="evenodd" />
+</svg>
+
+               <span class="ml-3">Daftar Artikel</span>
+            </a>
+          </li>
+          </ul>
+          
+          </div>
       <ul class="pt-2 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
       <li>
                   <a href="{{route("profile.edit")}}" class="flex items-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 group  hover:text-slate-900 dark:hover:text-slate-100 {{ Request()->routeIs("profile.edit") ? "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100" : "text-slate-600 dark:text-slate-400"}}">                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-slate-600 transition duration-75 group-hover:text-slate-900 dark:group-hover:text-slate-100  {{ Request()->routeIs("profile.edit") ? "text-slate-900 dark:text-slate-100" : ""}}" aria-hidden="true">
