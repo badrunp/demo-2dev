@@ -10,15 +10,14 @@ class UserController extends Controller
 {
   public function findAllAdmin()
   {
-    $user = User::select("id", "name as text")
-      ->where("role", "admin")
-      ->get();
+    $user = User::select("id", "name as text")->get();
 
     return response()->json($user);
   }
-  
-  public function findById($id){
-   $user = User::find($id);
-   return response()->json($user);
+
+  public function findById($id)
+  {
+    $user = User::find($id);
+    return response()->json($user);
   }
 }
