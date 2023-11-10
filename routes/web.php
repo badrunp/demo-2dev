@@ -69,6 +69,10 @@ Route::get("artikel/{article:slug}", [ArticleController::class, "show"])->name(
   "articles.show"
 );
 
+Route::resource("messages", MessageController::class)->only([
+"store"
+]);
+
 Route::middleware("auth")->group(function () {
   Route::resource("users", UserController::class);
   Route::resource("products", ProductController::class);
@@ -88,7 +92,6 @@ Route::middleware("auth")->group(function () {
     "show",
     "create",
     "destroy",
-    "store",
   ]);
   Route::resource("tags", TagController::class);
   Route::resource("articles", ArticleController::class)->except(["show"]);
