@@ -1,12 +1,12 @@
 @props(["data" => []])
-
-   <section class="{{ Request()->routeIs('tentang-kami') ? '' : 'bg-blue-600'}} ">
+      @if(count($data) > 0)
+   <section class="{{ Request()->routeIs('tentang-kami') ? '' : 'bg-blue-700'}} ">
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
       <div class="px-4 flex items-center flex-col gap-4">
          <h1 class=" text-2xl font-semibold text-center {{ Request()->routeIs('tentang-kami') ? '' : 'text-slate-100' }}">Tim Kami</h1>
          <p class="max-w-lg text-center text-sm {{ Request()->routeIs('tentang-kami') ? 'text-slate-700 dark:text-slate-400' : 'text-slate-200' }}">Dengan kondisi tim yang muda siap berkarya dan berpengalaman, kami siap sedia untuk membangun negeri menjadi lebih baik dan go-digital. Menyasar sektor bidang pasar secara menyeluruh.</p>
       </div>
-      @if(count($data) > 0)
+
       <div class="flex items-center justify-center flex-wrap gap-6">
        @foreach($data as $team)
          <div class="flex flex-col gap-4 items-center justify-center">
@@ -43,5 +43,6 @@
          </div>
          @endforeach
       </div>
-      @endif
+    
    </section>
+     @endif

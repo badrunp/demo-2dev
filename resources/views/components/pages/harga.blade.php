@@ -1,5 +1,5 @@
-@props(["data"])
-
+@props(["data" => []])
+@if(count($data) > 0)
  <section class="py-16 flex flex-col gap-8">
       <div class="flex flex-col items-center gap-4 max-w-4xl mx-auto px-4">
          <h1 class="text-2xl font-semibold text-center">Daftar Harga Paket Website</h1>
@@ -122,3 +122,4 @@
          </div>
       </div>
    </section>
+   @endif

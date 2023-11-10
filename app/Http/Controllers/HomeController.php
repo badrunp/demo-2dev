@@ -7,6 +7,8 @@ use App\Models\Benefit;
 use App\Models\Testimoni;
 use App\Models\Team;
 use App\Models\Faq;
+use App\Models\Article;
+use App\Models\Project;
 
 class HomeController extends Controller
 {
@@ -46,6 +48,14 @@ class HomeController extends Controller
       "faqs" => Faq::select(["pertanyaan", "jawaban"])
         ->orderBy("id", "desc")
         ->get(),
+      "articles" => Article::where("status", true)
+        ->limit(6)
+        ->get(),
+      "projects" => Project::with(["type:id,name"])
+        ->where("status", true)
+        ->limit(6)
+        ->get()
+        ->groupBy("type.name"),
     ];
 
     return view("home", $data);

@@ -30,6 +30,8 @@
 {{--          </a> --}}
       </div>
    </section>
+   
+   @if(count($products) > 0)
    <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto">
       <div class="flex flex-col items-start gap-4">
          <h1 class="text-2xl font-semibold">Layanan Kami</h1>
@@ -55,8 +57,9 @@
          @endforeach
       </div>
    </section>
+   @endif
   <x-pages.harga :data="$products" />
-   <section class=" bg-blue-600">
+   <section class=" bg-blue-700">
       <div class="px-4 py-16 flex flex-col gap-4 overflow-x-hidden max-w-4xl mx-auto">
          <div class="relative">
             <div class="translate-x-4 sm:translate-x-16">
@@ -86,6 +89,7 @@
          </div>
       </div>
    </section>
+   @if(count($benefits) > 0)
    <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto">
       <h1 class="text-2xl font-semibold text-center">Kenapa Menggunakan <br/> Jasa Duos Dev</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -98,8 +102,10 @@
          @endforeach
       </div>
    </section>
+   @endif
+   
    @if(count($testimonis) >= 2)
-   <section class=" bg-blue-600">
+   <section class=" bg-blue-700">
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
          <div class="flex items-center flex-col gap-4">
             <h1 class="text-2xl font-semibold text-center text-slate-100">Testimoni Dari Klien</h1>
@@ -150,12 +156,14 @@
                </button>
             </div>
          </div>
+      
       </div>
    </section>
    @endif
-<x-pages.proyek/>
+<x-pages.proyek :data="$projects"/>
 <x-tim :data="$teams"/>
-<x-pages.artikel/>
+<x-pages.artikel :data="$articles"/>
+@if(count($faqs) > 0)
    <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto">
       <div class="px-4 flex items-center flex-col gap-4">
          <h1 class="text-2xl font-semibold text-center">FAQ</h1>
@@ -182,4 +190,5 @@
          </div>
       </div>
    </section>
+   @endif
 </x-guest-layout>

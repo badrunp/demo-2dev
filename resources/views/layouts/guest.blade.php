@@ -10,12 +10,12 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
      
-{{--        <script src="https://cdn.tailwindcss.com"></script>     --}}
-{{--         <script>    --}}
-{{--           tailwind.config = {    --}}
-{{--           darkMode: 'class'     --}}
-{{--        }     --}}
-{{--       </script>   --}}
+{{--         <script src="https://cdn.tailwindcss.com"></script>      --}}
+{{--         <script>     --}}
+{{--            tailwind.config = {     --}}
+{{--            darkMode: 'class'      --}}
+{{--         }      --}}
+       </script>   
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
       <script>
@@ -302,7 +302,7 @@
       </header>
       {{ $slot }}
       @if(!Request()->routeIs("kontak-kami"))
-     <section class="bg-blue-800">
+     <section class="bg-blue-700">
       <div class="flex items-center flex-col justify-center gap-6 py-8 px-6">
          <div class="flex flex-col items-center justify-center text-slate-100 gap-1">
             <h1 class="text-2xl font-bold">Butuh Bantuan?</h1>
@@ -314,7 +314,7 @@
       </div>
    </section>
    @endif
-      <footer class="relative border-t border-blue-700 dark:border-slate-700 overflow-hidden bg-blue-700 dark:bg-transparent text-white">
+      <footer class="relative border-t border-blue-800 dark:border-slate-700 overflow-hidden bg-blue-800 dark:bg-transparent text-white">
       <div class="px-4 py-16 flex flex-col gap-16 max-w-4xl mx-auto">
          <div class="flex flex-col md:flex-row gap-6">
             <div class="flex flex-col gap-3 max-w-sm">
@@ -325,7 +325,7 @@
                      <span class="text-[9px] -mt-1 italic">Tech and Solution</span>
                   </div>
                </a>
-               <p class="text-[15px] text-slate-200 opacity-80 dark:opacity-100 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman.</p>
+               <p class="text-sm text-slate-200 opacity-80 dark:opacity-100 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman.</p>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 grow">
                <div class="flex flex-col gap-1.5">
@@ -389,7 +389,7 @@
          </div>
          </div>
       </footer>
-{{--  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>   --}}
+{{--   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>    --}}
       <script> 
          var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
          var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');

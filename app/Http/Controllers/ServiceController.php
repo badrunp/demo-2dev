@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
 
 class ServiceController extends Controller
 {
@@ -38,7 +39,13 @@ class ServiceController extends Controller
   public function store(Request $request)
   {
     $data = $request->validate([
-      "name" => ["required", "string", "min:3", "max:20"],
+      "name" => [
+        "required",
+        "string",
+        "min:3",
+        "max:20",
+        Rule::unique(Service::class),
+      ],
       "desc" => ["required", "string", "min:3"],
       "photo" => ["required", "image", "mimes:png,svg", "max:2048"],
     ]);
@@ -75,20 +82,26 @@ class ServiceController extends Controller
   public function update(Request $request, Service $service)
   {
     $data = $request->validate([
-      "name" => ["required", "string", "min:3", "max:20"],
+      "name" => [
+        "required",
+        "string",
+        "min:3",
+        "max:20",
+        Rule::unique(Service::class)->ignore($service->id),
+      ],
       "desc" => ["required", "string", "min:3"],
-            "photo" => ["nullable", "image", "mimes:png,svg", "max:2048"],
+      "photo" => ["nullable", "image", "mimes:png,svg", "max:2048"],
     ]);
 
-    if($request->hasFile("photo")){
-    if (Storage::exists($service->photo)) {
-      Storage::delete($service->photo);
-    }
-     $data["photo"] = $request->photo->store("images");
+    if ($request->hasFile("photo")) {
+      if (Storage::exists($service->photo)) {
+        Storage::delete($service->photo);
+      }
+      $data["photo"] = $request->photo->store("images");
     }
 
     $service->update($data);
-    
+
     return to_route("services.index")->with("success", "Data berhasil diedit");
   }
 
