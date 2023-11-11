@@ -4,7 +4,7 @@
    <section class=" py-16 flex flex-col gap-12 max-w-4xl mx-auto">
       <div class="px-4 flex items-center flex-col gap-4">
          <h1 class="text-2xl font-semibold text-center">Hasil Proyek</h1>
-         <p class="text-center text-sm text-slate-700 dark:text-slate-400 max-w-lg">Ini adalah hasil proyek yang telah berhasil kami kerjakan untuk saat ini.</p>
+         <p class="text-center text-sm leading-6 text-slate-700 dark:text-slate-400 max-w-lg">Ini adalah hasil proyek yang telah berhasil kami kerjakan untuk saat ini.</p>
       </div>
       <div>
          <div class="mb-4 border-b border-slate-200 dark:border-slate-700 sm:px-4">
@@ -49,7 +49,7 @@
                 {{$project->name}}
             </h5>
         </a>
-        <p class="mb-3 font-normal text-slate-700 dark:text-slate-400 text-sm">
+        <p class="mb-3 font-normal text-slate-700 dark:text-slate-400 text-sm leading-6">
             {{$project->summary}}
         </p>
         <div class="flex items-center gap-2">

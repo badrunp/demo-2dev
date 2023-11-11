@@ -4,7 +4,7 @@
       <div class="flex flex-col justify-center items-center gap-6 sm:max-w-md md:max-w-lg">
          <h1 id="jumbotron-title" class="text-4xl font-semibold text-center text-slate-100">Kami Siap Membuat Website</span> Impian Anda</h1>
          <p class="text-slate-200 dark:text-slate-400 text-center opacity-80 dark:opacity-100">Kami hadir untuk membantu mewujudkan website impian Anda yang siap Go-Digital dari lokal hingga internasional</p>
-         <a href="{{route("harga")}}" class="w-max mt-2 text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 dark:hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-10 py-3 text-center flex items-center gap-2 font-medium">
+         <a href="{{route("harga")}}" class="w-max mt-2 text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 dark:hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm leading-6  px-10 py-3 text-center flex items-center gap-2 font-medium">
             <span>Lihat Harga</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -15,8 +15,8 @@
    <section class="px-4 py-16" id="tentang-kami">
       <div class=" flex flex-col gap-4 max-w-4xl mx-auto">
          <h1 class="tentang-kami-title text-2xl font-semibold text-center">Tentang Kami</h1>
-         <p class="text-sm text-slate-700 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman. Dengan bermodal pengetahuan dan jam terbang yang kami miliki, kami siap menjawab kebutuhan masyarakat terlebih untuk perusahaan dalam pembuatan website untuk kemajuan usahanya.</p>
-         <a href="{{route("tentang-kami")}}" class="mt-2 w-max ml-auto md:ml-0 text-sm font-medium text-blue-600 flex items-center gap-2 focus:underline hover:underline">
+         <p class="text-sm leading-6  text-slate-700 dark:text-slate-400 leading-6">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman. Dengan bermodal pengetahuan dan jam terbang yang kami miliki, kami siap menjawab kebutuhan masyarakat terlebih untuk perusahaan dalam pembuatan website untuk kemajuan usahanya.</p>
+         <a href="{{route("tentang-kami")}}" class="mt-2 w-max ml-auto md:ml-0 text-sm leading-6  font-medium text-blue-600 flex items-center gap-2 focus:underline hover:underline">
             <span>Selengkapnya</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -29,7 +29,7 @@
    <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="layanan-kami">
       <div class="flex flex-col items-start gap-4">
          <h1 class="text-2xl font-semibold">Layanan Kami</h1>
-         <span class="text-sm text-slate-700 dark:text-slate-400">Mau membuat website apa? Duos Dev solusi lengkap dalam pembuatan website untuk perusahaan atau perorangan, dengan tampilan yang responsive, serta layanan marketing untuk website Anda.</span>
+         <span class="text-sm leading-6  text-slate-700 dark:text-slate-400 leading-6">Mau membuat website apa? Duos Dev solusi lengkap dalam pembuatan website untuk perusahaan atau perorangan, dengan tampilan yang responsive, serta layanan marketing untuk website Anda.</span>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
        @foreach($products as $service)
@@ -46,7 +46,7 @@
             
                <h5 class="mb-1 text-base font-medium tracking-tight text-slate-100">{{$service[0]->service->name}}</h5>
             
-            <p class="text-sm mb-3 font-normal text-slate-100">{{$service[0]->service->desc}}</p>
+            <p class="text-sm leading-6  mb-3 font-normal text-slate-100">{{$service[0]->service->desc}}</p>
          </div>
          @endforeach
       </div>
@@ -75,7 +75,7 @@
             <h1 class="text-2xl sm:text-6xl font-bold text-slate-100">
                Proses Cepat <br /> Dan Hasil Berkualitas
             </h1>
-            <p class="text-sm mt-2 sm:mt-4 text-slate-200">
+            <p class="text-sm leading-6  mt-2 sm:mt-4 text-slate-200">
                Proses pembuatan website yang cepat dengan kualitas tinggi karena
                menggunakan teknologi dan framework terupdate yang banyak digunakan
                oleh pengembang aplikasi di seluruh dunia.
@@ -91,7 +91,7 @@
          <div class="block p-6  bg-white border border-slate-200 rounded-lg shadow  dark:bg-slate-800 dark:border-slate-700 flex flex-col items-center gap-2">
             {!! $benefit->icon !!}
             <h5 class="text-base font-semibold tracking-tight">{{$benefit->title}}</h5>
-            <p class="text-sm text-center font-normal text-slate-700 dark:text-slate-400">{{$benefit->desc}}</p>
+            <p class="text-sm leading-6  text-center font-normal text-slate-700 dark:text-slate-400">{{$benefit->desc}}</p>
          </div>
          @endforeach
       </div>
@@ -103,7 +103,7 @@
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
          <div class="flex items-center flex-col gap-4">
             <h1 class="text-2xl font-semibold text-center text-slate-100">Testimoni Dari Klien</h1>
-            <p class="text-center text-sm text-slate-200 max-w-lg opacity-80">Beberapa testimoni dari klien yang sudah menggunakan jasa kami.</p>
+            <p class="text-center text-sm leading-6  text-slate-200 max-w-lg opacity-80">Beberapa testimoni dari klien yang sudah menggunakan jasa kami.</p>
          </div>
          <div>
             <div id="default-carousel" class="relative w-full" data-carousel="slide">
@@ -125,7 +125,7 @@
                            <p class=" text-xs text-slate-200 opacity-80">{{ $testimoni->pekerjaan}}</p>
                            @endif
                         </div>
-                        <p class="text-center text-sm text-slate-100">{{$testimoni->message}}</p>
+                        <p class="text-center text-sm leading-6  text-slate-100">{{$testimoni->message}}</p>
                      </div>
                   </div>
                  @endforeach
@@ -161,7 +161,7 @@
    <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="faq">
       <div class="px-4 flex items-center flex-col gap-4">
          <h1 class="text-2xl font-semibold text-center">FAQ</h1>
-         <p class="text-center text-sm text-slate-700 dark:text-slate-400 max-w-lg">Ini adalah pertanyaan yang sering ditanyakan kepada kami.</p>
+         <p class="text-center text-sm leading-6  text-slate-700 dark:text-slate-400 max-w-lg">Ini adalah pertanyaan yang sering ditanyakan kepada kami.</p>
       </div>
       <div>
          <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-100" data-inactive-classes="text-slate-1000 dark:text-slate-400">
@@ -176,7 +176,7 @@
                </button>
             </h2>
             <div id="accordion-flush-body-{{$key}}" class="hidden" aria-labelledby="accordion-flush-heading-{{$key}}">
-               <div class="py-5 border-b border-slate-200 dark:border-slate-700 text-sm px-2">
+               <div class="py-5 border-b border-slate-200 dark:border-slate-700 text-sm leading-6  px-2">
                   <div class="mb-2 text-slate-700 dark:text-slate-400 space-y-4">{!!$faq->jawaban!!}</div>
                </div>
             </div>

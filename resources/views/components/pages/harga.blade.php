@@ -3,7 +3,7 @@
  <section class="py-16 flex flex-col gap-8">
       <div class="flex flex-col items-center gap-4 max-w-4xl mx-auto px-4">
          <h1 class="text-2xl font-semibold text-center">Daftar Harga Paket Website</h1>
-         <span class="text-center text-sm text-slate-700 dark:text-slate-400 max-w-lg">Pilih paket pembuatan website yang sesuai dengan kebutuhan anda.</span>
+         <span class="text-center text-sm text-slate-700 dark:text-slate-400 max-w-lg leading-6">Pilih paket pembuatan website yang sesuai dengan kebutuhan anda.</span>
       </div>
       <div>
          <div class="mb-4 border-b border-slate-200 dark:border-slate-700 max-w-4xl mx-auto px-4">

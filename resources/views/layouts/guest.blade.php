@@ -10,12 +10,12 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
            
-{{--         <script src="https://cdn.tailwindcss.com"></script>        --}}
-{{--           <script>       --}}
-{{--             tailwind.config = {       --}}
-{{--             darkMode: 'class'        --}}
-{{--           }        --}}
-{{--         </script>     --}}
+        {{--  <script src="https://cdn.tailwindcss.com"></script>         --}}
+{{--            <script>       --}}
+{{--              tailwind.config = {        --}}
+{{--              darkMode: 'class'         --}}
+{{--            }        --}}
+{{--          </script>      --}}
               @stack("head")
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -43,11 +43,11 @@
          <div class="flex items-center gap-4 sm:gap-2 md:gap-4">
             <nav class="relative hidden sm:block dark:text-slate-400">
                <ul class="flex items-center gap-1 list-none">
-                  <li><a href="/proyek" class="py-2 px-1 md:px-2  rounded text-sm xl:text-base"><span>Proyek</span></a></li>
-                  <li><a href="/harga" class="py-2 px-1 md:px-2 rounded text-sm xl:text-base"><span>Harga</span></a></li>
-                  <li><a href="/tentang-kami" class="py-2 px-1 md:px-2 rounded text-sm xl:text-base"><span>Tentang Kami</span></a></li>
-                  <li><a href="/artikel" class="p-2 rounded text-sm xl:text-base hidden lg:block"><span>Artikel</span></a></li>
-                  <li><a href="/kontak-kami" class="p-2 rounded text-sm xl:text-base hidden lg:block"><span>Kontak Kami</span></a></li>
+                  <li><a href="/proyek" class="py-2 px-1 md:px-2  rounded text-sm leading-6  xl:text-base"><span>Proyek</span></a></li>
+                  <li><a href="/harga" class="py-2 px-1 md:px-2 rounded text-sm leading-6  xl:text-base"><span>Harga</span></a></li>
+                  <li><a href="/tentang-kami" class="py-2 px-1 md:px-2 rounded text-sm leading-6  xl:text-base"><span>Tentang Kami</span></a></li>
+                  <li><a href="/artikel" class="p-2 rounded text-sm leading-6  xl:text-base hidden lg:block"><span>Artikel</span></a></li>
+                  <li><a href="/kontak-kami" class="p-2 rounded text-sm leading-6  xl:text-base hidden lg:block"><span>Kontak Kami</span></a></li>
                   <li>
                      <button id="dropdownDividerButton" class="hidden sm:block lg:hidden" data-dropdown-toggle="dropdownDivider" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -56,7 +56,7 @@
                      </button>
                      <!-- Dropdown menu -->
                      <div id="dropdownDivider" class="z-10 hidden bg-white divide-y divide-slate-100 rounded-lg shadow w-44 dark:bg-slate-800 dark:divide-slate-700">
-                        <ul class="py-2 text-sm text-slate-700 dark:text-slate-200 list-none" aria-labelledby="dropdownDividerButton" style="padding: 0 !important;">
+                        <ul class="py-2 text-sm leading-6  text-slate-700 dark:text-slate-200 list-none" aria-labelledby="dropdownDividerButton" style="padding: 0 !important;">
                            <li>
                               <a href="/artikel" class="block px-4 py-2 text-slate-700 dark:text-slate-400">Artikel</a>
                            </li>
@@ -71,7 +71,7 @@
             
             
             @auth
-                        <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="flex sm:hidden items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 dark:text-white" type="button">
+                        <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="flex sm:hidden items-center text-sm leading-6  font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 dark:text-white" type="button">
     <span class="sr-only">Open user menu</span>
 
 <div class="relative w-8 h-8 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
@@ -82,7 +82,7 @@
             @endauth
             
             
-            <button id="theme-toggle" type="button" class="  rounded-lg text-sm">
+            <button id="theme-toggle" type="button" class="  rounded-lg text-sm leading-6 ">
                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                </svg>
@@ -90,14 +90,14 @@
                   <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                </svg>
             </button>
-            <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center text-sm  rounded-lg sm:hidden focus:outline-none">
+            <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center text-sm leading-6   rounded-lg sm:hidden focus:outline-none">
                <span class="sr-only">Open sidebar</span>
                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                </svg>
             </button>
             @if(Auth::check())
-            <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="hidden sm:flex items-center text-sm font-medium rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 dark:text-white" type="button">
+            <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="hidden sm:flex items-center text-sm leading-6  font-medium rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 dark:text-white" type="button">
     <span class="sr-only">Open user menu</span>
 <div class="relative w-8 h-8 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 mr-2">
     <svg class="absolute w-10 h-10 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
@@ -110,11 +110,11 @@
 
 <!-- Dropdown menu -->
 <div id="dropdownAvatarName" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-    <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+    <div class="px-4 py-3 text-sm leading-6  text-gray-900 dark:text-white">
       <div class="font-medium ">{{Auth::user()->name}}</div>
       <div class="truncate">{{ Auth::user()->email}}</div>
     </div>
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 list-none" style="padding: 0 !important;" aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
+    <ul class="py-2 text-sm leading-6  text-gray-700 dark:text-gray-200 list-none" style="padding: 0 !important;" aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
       <li>
         <a href="{{ route("dashboard")}}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
       </li>
@@ -128,7 +128,7 @@
 
                             <a href="route('logout')"
                                     onclick="event.preventDefault();
-                                                this.closest('form').submit();" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Keluar</a></form>
+                                                this.closest('form').submit();" class="block px-4 py-2 text-sm leading-6  text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Keluar</a></form>
       
     </div>
 </div>
@@ -141,17 +141,19 @@
                   </svg>
                   <span>Masuk</span>
                </a>
+               @if(Route::has("register"))
                <a href="{{route("register")}}" class="py-2 px-3 text-xs font-medium text-slate-900 focus:outline-none bg-white rounded-full border border-slate-200 hover:bg-slate-100 hover:text-blue-700 focus:z-10 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 text-center flex items-center justify-center  gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                      <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
                   </svg>
                   <span>Daftar</span>
                </a>
+               @endif
             </div>
             @endif
          </div>
          <aside id="logo-sidebar" class="bg-white fixed sm:hidden top-0 left-0 z-[100] w-72 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-            <button type="button" data-drawer-hide="logo-sidebar" aria-controls="drawer-navigation" class="text-slate-700 dark:text-slate-400 rounded text-sm absolute top-2.5 right-2.5 inline-flex items-center p-1.5 rounded" >
+            <button type="button" data-drawer-hide="logo-sidebar" aria-controls="drawer-navigation" class="text-slate-700 dark:text-slate-400 rounded text-sm leading-6  absolute top-2.5 right-2.5 inline-flex items-center p-1.5 rounded" >
                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                </svg>
@@ -282,21 +284,23 @@
                @else
                <ul class="py-6 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2 list-none">
                   <li>
-                     <a href="{{route("login")}}" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center flex items-center justify-center rounded-full gap-2">
+                     <a href="{{route("login")}}" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm leading-6  px-5 py-2.5 text-center flex items-center justify-center rounded-full gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                            <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
                         </svg>
                         <span>Masuk</span>
                      </a>
                   </li>
+                                 @if(Route::has("register"))
                   <li>
-                     <a href="{{route("register")}}" class="py-2.5 px-5 text-sm font-medium text-slate-900 focus:outline-none bg-white rounded-full border border-slate-200 hover:bg-slate-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 text-center flex items-center justify-center rounded-full gap-2">
+                     <a href="{{route("register")}}" class="py-2.5 px-5 text-sm leading-6  font-medium text-slate-900 focus:outline-none bg-white rounded-full border border-slate-200 hover:bg-slate-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 text-center flex items-center justify-center rounded-full gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                            <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
                         </svg>
                         <span>Daftar</span>
                      </a>
                   </li>
+                  @endif
                </ul>
                @endif
             </div>
@@ -309,7 +313,7 @@
       <div class="flex items-center flex-col justify-center gap-6 py-8 px-6">
          <div class="flex flex-col items-center justify-center text-slate-100 gap-1">
             <h1 class="text-2xl font-bold text-slate-100">Butuh Bantuan?</h1>
-            <p class="text-center text-sm text-slate-200">Jangan ragu untuk menghubungi kami setiap hari 24 jam.</p>
+            <p class="text-center text-sm leading-6  text-slate-200">Jangan ragu untuk menghubungi kami setiap hari 24 jam.</p>
          </div>
          <a href="{{route("kontak-kami")}}" class="text-slate-100 bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-full px-5 py-2.5 text-center mr-2 mb-2 text-xs flex items-center gap-2"><span>Hubungi Kami</span>            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -328,58 +332,58 @@
                      <span class="text-[9px] -mt-1 italic">Tech and Solution</span>
                   </div>
                </a>
-               <p class="text-sm text-slate-200 opacity-80 dark:opacity-100 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman.</p>
+               <p class="text-sm leading-6  text-slate-200 opacity-80 dark:opacity-100 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman.</p>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 grow">
                <div class="flex flex-col gap-1.5">
-                  <p class="text-sm font-medium">Menu</p>
+                  <p class="text-sm leading-6  font-medium">Menu</p>
                   <ul class="list-none">
                      <li>
-                        <a href="{{route("proyek")}}" class="text-slate-300 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Proyek</a>
+                        <a href="{{route("proyek")}}" class="text-slate-300 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Proyek</a>
                      </li>
                      <li>
-                        <a href="{{route("harga")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Harga</a>
+                        <a href="{{route("harga")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Harga</a>
                      </li>
                      
                      <li>
-                     <a href="{{route("tentang-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Tentang Kami</a>
+                     <a href="{{route("tentang-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Tentang Kami</a>
                      </li>
 <li>
-                     <a href="{{route("artikel")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Artikel</a>
+                     <a href="{{route("artikel")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Artikel</a>
                      </li>
                      <li>
-                        <a href="{{route("kontak-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Kontak Kami</a>
+                        <a href="{{route("kontak-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Kontak Kami</a>
                      </li>
                   </ul>
                </div>
                <div class="flex flex-col gap-1.5">
-                  <p class="text-sm font-medium">Kontak</p>
+                  <p class="text-sm leading-6  font-medium">Kontak</p>
                   <ul class="list-none">
                      <li>
-                        <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Email</a>
+                        <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Email</a>
                      </li>
                      <li>
-                        <a href="https://www.github.com/duosdev" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Github</a>
+                        <a href="https://www.github.com/duosdev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Github</a>
                      </li>
                      <li>
-                        <a href="https://instagram.com/duos_dev?igshid=OGQ5ZDc2ODk2ZA==" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Instagram</a>
+                        <a href="https://instagram.com/duos_dev?igshid=OGQ5ZDc2ODk2ZA==" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Instagram</a>
                      </li>
                      <li>
-                        <a href="https://facebook.com/profile.php?id=100088171750481" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Facebook</a>
+                        <a href="https://facebook.com/profile.php?id=100088171750481" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Facebook</a>
                      </li>
                      </li>
-                     <a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">WhatsApp</a>
+                     <a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">WhatsApp</a>
                      </li>
                   </ul>
                </div>
                <div class="flex flex-col gap-1.5">
-                  <p class="text-sm font-medium">Legal</p>
+                  <p class="text-sm leading-6  font-medium">Legal</p>
                   <ul class="list-none">
                      <li>
-                        <a href="{{route("kebijakan-privasi")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Kebijakan Privasi</a>
+                        <a href="{{route("kebijakan-privasi")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Kebijakan Privasi</a>
                      </li>
                      <li>
-                        <a href="{{route("penggunaan-cookies")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Penggunaan Cookies</a>
+                        <a href="{{route("penggunaan-cookies")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Penggunaan Cookies</a>
                      </li>
                   </ul>
                </div>

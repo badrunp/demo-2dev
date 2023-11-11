@@ -36,7 +36,7 @@
 <div class="px-4 space-y-4 mb-6">
  <p class="text-xs border border-blue-600 rounded-full py-1 px-3 w-max bg-blue-100 text-blue-800">{{ $article->category->name}}</p>
  <h1 class="text-2xl font-medium">{{$article->title}}</h1>
- <p class="text-sm text-slate-700 dark:text-slate-400">{{$article->summary}}.</p>
+ <p class="text-sm text-slate-700 dark:text-slate-400 leading-6">{{$article->summary}}.</p>
  
                 <div class="flex items-center gap-3">
                 @if($article->user->photo)
@@ -62,7 +62,7 @@
 @endif
 </div>
 
-<div class="px-4 mb-8 text-sm space-y-4 text-slate-800 dark:text-slate-200">
+<div class="px-4 mb-8 text-sm leading-6 space-y-4 text-slate-800 dark:text-slate-300">
  {!! $article->content !!}
 </div>
 

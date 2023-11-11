@@ -33,7 +33,7 @@
                   <span class="block mb-2 text-xl font-bold tracking-tight hover:underline">
                   {{$item->title}}</span>
                </a>
-               <p class="text-sm mb-3 font-normal text-slate-700 dark:text-slate-400">{{$item->summary}}</p>
+               <p class="text-sm leading-6  mb-3 font-normal text-slate-700 dark:text-slate-400">{{$item->summary}}</p>
                <div class="flex items-center gap-3">
                 @if($item->user->photo)
                   <img class="w-10 h-10 rounded-full" src="{{asset("/images/profil.jpg")}}" alt="Rounded avatar">
@@ -43,8 +43,8 @@
 </div>
                   @endif
                   <div>
-                     <h2 class="text-sm font-semibold">{{$item->user->name}}</h2>
-                     <p class="text-sm text-slate-700 dark:text-slate-400">{{$item->user->jabatan ? $item->user->jabatan : "Admin"}}</p>
+                     <h2 class="text-sm leading-6  font-semibold">{{$item->user->name}}</h2>
+                     <p class="text-sm leading-6  text-slate-700 dark:text-slate-400">{{$item->user->jabatan ? $item->user->jabatan : "Admin"}}</p>
                   </div>
                </div>
             </div>
