@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Testimoni;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Builder;
 
 class TestimoniController extends Controller
 {
@@ -35,8 +36,8 @@ class TestimoniController extends Controller
   public function store(Request $request)
   {
     $data = $request->validate([
-      "name" => ["required", "string", "min:3", "max:20"],
-      "message" => ["required", "string", "min:3", "max:100"],
+      "name" => ["required", "string", "min:3", "max:100"],
+      "message" => ["required", "string", "min:3", "max:150"],
       "alamat" => ["nullable", "string", "min:3"],
       "pekerjaan" => ["nullable", "string", "min:3"],
       "photo" => ["nullable", "image", "mimes:png,jpg,jpeg", "max:2048"],
@@ -75,7 +76,7 @@ class TestimoniController extends Controller
   {
     $data = $request->validate([
       "name" => ["required", "string", "min:3", "max:20"],
-      "message" => ["required", "string", "min:3", "max:100"],
+      "message" => ["required", "string", "min:3", "max:150"],
       "alamat" => ["nullable", "string", "min:3"],
       "pekerjaan" => ["nullable", "string", "min:3"],
       "photo" => ["nullable", "image", "mimes:png,jpg,jpeg", "max:2048"],

@@ -8,7 +8,7 @@
       </div>
       <div>
          <div class="mb-4 border-b border-slate-200 dark:border-slate-700 sm:px-4">
-            <ul class="hide-scroll flex flex-nowrap -mb-px text-sm font-medium text-center overflow-x-scroll" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+            <ul class="hide-scroll flex flex-nowrap -mb-px text-sm font-medium text-center overflow-x-scroll list-none" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
              @foreach($data as $key => $item)
                <li class="mr-2" role="presentation">
                   <button class="w-max inline-block p-4 border-b-2 rounded-t-lg " id="{{\Str::slug($key)}}-tab" data-tabs-target="#{{\Str::slug($key)}}" type="button" role="tab" aria-controls="{{\Str::slug($key)}}" aria-selected="false">{{$key}}</button>

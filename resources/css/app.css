@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h1 {
+        @apply text-2xl font-medium text-slate-950 dark:text-slate-50;
+    }
+    h2 {
+        @apply text-xl font-medium text-slate-950 dark:text-slate-50;
+    }
+    h3 {
+        @apply text-lg font-medium text-slate-950 dark:text-slate-50;
+    }
+    h4 {
+        @apply text-base font-medium text-slate-950 dark:text-slate-50;
+    }
+    h5 {
+        @apply text-sm font-medium text-slate-950 dark:text-slate-50;
+    }
+    h6 {
+        @apply text-xs font-medium text-slate-950 dark:text-slate-50;
+    }
+
+    ul {
+        @apply list-disc list-inside;
+    }
+
+    ol {
+        @apply list-decimal list-inside;
+    }
+}
+
 body {
     font-family: "Rubik", sans-serif;
 }

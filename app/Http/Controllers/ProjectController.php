@@ -9,6 +9,7 @@ use App\Models\Tool;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
+use Illuminate\Database\Eloquent\Builder;
 
 class ProjectController extends Controller
 {
@@ -19,10 +20,9 @@ class ProjectController extends Controller
       "projects" => project::select([
         "id",
         "name",
-        "summary",
         "type_id",
         "status",
-        "slug"
+        "slug",
       ])
         ->when($search, function (Builder $query, string $search) {
           $query->where("name", "like", "%" . $search . "%");
@@ -53,13 +53,13 @@ class ProjectController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:100",
         Rule::unique(Project::class),
       ],
       "type_id" => ["required"],
       "thumbnail" => ["required", "image", "mimes:png,jpg,jpeg"],
       "demo_url" => ["nullable", "string", "url:http,https", "max:255"],
-      "summary" => ["required", "min:8", "max:100"],
+      "summary" => ["required", "min:8"],
       "status" => ["nullable"],
       "desc" => ["required", "string", "min:3"],
     ]);
@@ -111,13 +111,13 @@ class ProjectController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:100",
         Rule::unique(Project::class)->ignore($project->id),
       ],
       "type_id" => ["required"],
       "thumbnail" => ["nullable", "image", "mimes:png,jpg,jpeg", "max:2048"],
       "demo_url" => ["nullable", "string", "url:http,https", "max:255"],
-      "summary" => ["required", "min:8", "max:100"],
+      "summary" => ["required", "min:8"],
       "status" => ["nullable"],
       "desc" => ["required", "string", "min:3"],
     ]);

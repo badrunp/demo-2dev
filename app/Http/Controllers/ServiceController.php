@@ -6,6 +6,7 @@ use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
+use Illuminate\Database\Eloquent\Builder;
 
 class ServiceController extends Controller
 {
@@ -43,7 +44,7 @@ class ServiceController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:50",
         Rule::unique(Service::class),
       ],
       "desc" => ["required", "string", "min:3"],
@@ -86,7 +87,7 @@ class ServiceController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:50",
         Rule::unique(Service::class)->ignore($service->id),
       ],
       "desc" => ["required", "string", "min:3"],

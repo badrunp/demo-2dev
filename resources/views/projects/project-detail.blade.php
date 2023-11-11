@@ -4,7 +4,7 @@
 <!-- Breadcrumb -->
 
 <nav class="flex px-5 py-3 text-slate-700 border border-slate-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700 mb-4" aria-label="Breadcrumb">
-  <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+  <ol class="list-none inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse" style="padding: 0 !important;">
     <li class="inline-flex items-center">
       <a href="{{route("home")}}" class="inline-flex items-center text-sm font-medium text-slate-700 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white">
         <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -32,8 +32,8 @@
   </ol>
 </nav>
 
-<div class="max-w-2xl mx-auto pt-2">
-<div class="px-4 space-y-3 mb-4">
+<div class="max-w-3xl mx-auto pt-2">
+<div class="px-4 space-y-4 mb-4">
  <h1 class="text-2xl font-medium text-center">{{$project->type->name}}</h1>
 </div>
 
@@ -72,7 +72,7 @@
  <img src="{{asset("images/alivio.jpeg")}}" alt="{{$project->title}}" class="w-full bg-contain"/>
 </div>
 
-<div class="text-sm">
+<div class="text-sm space-y-4 text-slate-800 dark:text-slate-300">
  {!! $project->desc !!}
 </div>
 </div>
@@ -81,4 +81,12 @@
  
  
  </div>
+  @push("head")
+ <style>
+  ul,ol {
+   padding: 0 1rem !important;
+  }
+ </style>
+ @endpush
+ 
  </x-guest-layout>

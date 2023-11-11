@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Packet;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class PacketController extends Controller /**
@@ -36,7 +37,7 @@ class PacketController extends Controller /**
   public function store(Request $request)
   {
     $data = $request->validate([
-      "name" => ["required", "string", "min:3", "max:20"],
+      "name" => ["required", "string", "min:3", "max:50"],
       "desc" => ["required", "string", "min:3"],
     ]);
 
@@ -72,7 +73,7 @@ class PacketController extends Controller /**
   public function update(Request $request, Packet $packet)
   {
     $data = $request->validate([
-      "name" => ["required", "string", "min:3", "max:20"],
+      "name" => ["required", "string", "min:3", "max:50"],
       "desc" => ["required", "string", "min:3"],
     ]);
 

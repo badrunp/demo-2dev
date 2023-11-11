@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Database\Eloquent\Builder;
 
 class TagController extends Controller
 {
@@ -35,13 +36,7 @@ class TagController extends Controller
   public function store(Request $request)
   {
     $data = $request->validate([
-      "name" => [
-        "required",
-        "string",
-        "min:3",
-        "max:20",
-        Rule::unique(Tag::class),
-      ],
+      "name" => ["required", "string", "max:50", Rule::unique(Tag::class)],
       "desc" => ["nullable", "string", "min:3"],
     ]);
 
@@ -75,8 +70,7 @@ class TagController extends Controller
       "name" => [
         "required",
         "string",
-        "min:3",
-        "max:20",
+        "max:50",
         Rule::unique(Tag::class)->ignore($tag->id),
       ],
       "desc" => ["nullable", "string", "min:3"],

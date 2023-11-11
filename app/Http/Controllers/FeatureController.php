@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Feature;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class FeatureController extends Controller
 {
@@ -34,7 +35,7 @@ class FeatureController extends Controller
   public function store(Request $request)
   {
     $data = $request->validate([
-      "name" => ["required", "string", "min:3", "max:20"],
+      "name" => ["required", "string", "min:3", "max:50"],
       "desc" => ["nullable", "string", "min:3"],
     ]);
 
@@ -68,7 +69,7 @@ class FeatureController extends Controller
   public function update(Request $request, Feature $feature)
   {
     $data = $request->validate([
-      "name" => ["required", "string", "min:3", "max:20"],
+      "name" => ["required", "string", "min:3", "max:50"],
       "desc" => ["nullable", "string", "min:3"],
     ]);
 

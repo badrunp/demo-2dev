@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class CategoryController extends Controller
 {
@@ -39,7 +40,7 @@ class CategoryController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:50",
         Rule::unique(Category::class),
       ],
       "desc" => ["nullable", "string", "min:3"],
@@ -79,7 +80,7 @@ class CategoryController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:50",
         Rule::unique(Category::class)->ignore($category->id),
       ],
       "desc" => ["nullable", "string", "min:3"],

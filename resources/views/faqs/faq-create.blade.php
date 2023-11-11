@@ -5,7 +5,7 @@
 <!-- Breadcrumb -->
 
 <nav class="flex mb-8" aria-label="Breadcrumb">
-  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+  <ol class="list-none inline-flex items-center space-x-1 md:space-x-3">
     <li class="inline-flex items-center">
       <a href="{{ route("dashboard")}}" class="inline-flex items-center text-sm font-medium text-slate-700 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white">
         <svg class="w-3 h-3 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -48,11 +48,13 @@
             <x-input-error :messages="$errors->get('pertanyaan')" class="mt-2" />
         </div>
        
-        
-       <div class="mb-4">
-                   <x-input-label for="jawaban" :value="__('Jawaban')" class="mb-2" />
-<textarea id="jawaban" rows="4" name="jawaban" class="block p-2.5 w-full text-sm text-slate-900 border-slate-300 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 focus:border-blue-500 dark:focus:border-blue-600 focus:ring-blue-500 dark:focus:ring-blue-600 rounded-md shadow-sm" placeholder="Tulis jawaban disini...">{{old("jawaban")}}</textarea>
-            <x-input-error :messages="$errors->get('jawaban')" class="mt-2" />
+       
+              <div class="mb-4">
+                           <x-input-label for="jawaban" :value="__('Jawaban')" class="mb-2" />
+<textarea id="jawaban" name="jawaban">
+ {{old("jawaban")}}
+</textarea>
+         <x-input-error :messages="$errors->get('desc')" />
        </div>
         
         <div class="flex items-center gap-2">
@@ -68,4 +70,27 @@
         </div>
       </form>
 
+      @push("head")
+      <script src="https://cdn.tiny.cloud/1/rcgt62i5cc98uggo6wa96z7tm8g3kc9185jnnacta4fpycmz/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+      @endpush
+@push("script")
+<script>
+  tinymce.init({
+    selector: '#jawaban',
+    plugins: [
+      'advlist', 'autolink', 'link', 'lists', 'charmap', 'anchor', 'pagebreak',
+      'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+      'media', 'template',
+    ],
+    toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+      'bullist numlist outdent indent',
+    menu: {
+      favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+    },
+    menubar: 'favs file edit view insert format tools table help',
+    content_css: 'css/content.css'
+    
+  });
+</script>
+@endpush
 </x-app-layout>

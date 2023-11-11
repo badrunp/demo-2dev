@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Type;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class TypeController extends Controller
 {
@@ -39,7 +40,7 @@ class TypeController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:50",
         Rule::unique(Type::class),
       ],
       "desc" => ["nullable", "string", "min:3"],
@@ -79,7 +80,7 @@ class TypeController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:50",
         Rule::unique(Type::class)->ignore($type->id),
       ],
       "desc" => ["nullable", "string", "min:3"],

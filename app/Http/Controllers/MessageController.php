@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class MessageController extends Controller
 {

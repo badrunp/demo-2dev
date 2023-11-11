@@ -1,8 +1,8 @@
 <x-guest-layout>
-   <section class="relative min-h-screen sm:h-[700px] sm:min-h-0 w-full flex items-center justify-center flex-col px-6 overflow-hidden bg-blue-700 dark:bg-transparent">
+   <section class="relative min-h-screen sm:h-[700px] sm:min-h-0 w-full flex items-center justify-center flex-col px-6 overflow-hidden bg-blue-700 dark:bg-transparent" id="jumbotron">
       <div class="hidden dark:block w-[500px] md:w-[600px] lg:w-[800px] h-[500px] md:h-[800px] lg:w-[1000px] rounded-full bg-gradient-to-bl from-blue-600 to-transparent absolute top-0 -right-[200px] -z-10 blur-3xl opacity-20"></div>
       <div class="flex flex-col justify-center items-center gap-6 sm:max-w-md md:max-w-lg">
-         <h1 class="text-4xl font-semibold text-center text-slate-100">Kami Siap Membuat Website</span> Impian Anda</h1>
+         <h1 id="jumbotron-title" class="text-4xl font-semibold text-center text-slate-100">Kami Siap Membuat Website</span> Impian Anda</h1>
          <p class="text-slate-200 dark:text-slate-400 text-center opacity-80 dark:opacity-100">Kami hadir untuk membantu mewujudkan website impian Anda yang siap Go-Digital dari lokal hingga internasional</p>
          <a href="{{route("harga")}}" class="w-max mt-2 text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 dark:hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-10 py-3 text-center flex items-center gap-2 font-medium">
             <span>Lihat Harga</span>
@@ -12,9 +12,9 @@
          </a>
       </div>
    </section>
-   <section class="px-4 py-16">
+   <section class="px-4 py-16" id="tentang-kami">
       <div class=" flex flex-col gap-4 max-w-4xl mx-auto">
-         <h1 class="text-2xl font-semibold text-center">Tentang Kami</h1>
+         <h1 class="tentang-kami-title text-2xl font-semibold text-center">Tentang Kami</h1>
          <p class="text-sm text-slate-700 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman. Dengan bermodal pengetahuan dan jam terbang yang kami miliki, kami siap menjawab kebutuhan masyarakat terlebih untuk perusahaan dalam pembuatan website untuk kemajuan usahanya.</p>
          <a href="{{route("tentang-kami")}}" class="mt-2 w-max ml-auto md:ml-0 text-sm font-medium text-blue-600 flex items-center gap-2 focus:underline hover:underline">
             <span>Selengkapnya</span>
@@ -22,17 +22,11 @@
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
             </svg>
          </a>
-{{--            <a href="{{route("tentang-kami")}}" class="mt-2 w-max py-2.5 px-5 mr-2 text-sm font-medium rounded-full border bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:outline-none flex items-center gap-2 border-none text-slate-100"> --}}
-{{--             <span>Selengkapan</span> --}}
-{{--             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> --}}
-{{--                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /> --}}
-{{--             </svg> --}}
-{{--          </a> --}}
       </div>
    </section>
    
    @if(count($products) > 0)
-   <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto">
+   <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="layanan-kami">
       <div class="flex flex-col items-start gap-4">
          <h1 class="text-2xl font-semibold">Layanan Kami</h1>
          <span class="text-sm text-slate-700 dark:text-slate-400">Mau membuat website apa? Duos Dev solusi lengkap dalam pembuatan website untuk perusahaan atau perorangan, dengan tampilan yang responsive, serta layanan marketing untuk website Anda.</span>
@@ -59,7 +53,7 @@
    </section>
    @endif
   <x-pages.harga :data="$products" />
-   <section class=" bg-blue-700">
+   <section class=" bg-blue-700" id="quote">
       <div class="px-4 py-16 flex flex-col gap-4 overflow-x-hidden max-w-4xl mx-auto">
          <div class="relative">
             <div class="translate-x-4 sm:translate-x-16">
@@ -90,7 +84,7 @@
       </div>
    </section>
    @if(count($benefits) > 0)
-   <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto">
+   <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="benefit">
       <h1 class="text-2xl font-semibold text-center">Kenapa Menggunakan <br/> Jasa Duos Dev</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
        @foreach($benefits as $benefit)
@@ -105,7 +99,7 @@
    @endif
    
    @if(count($testimonis) >= 2)
-   <section class=" bg-blue-700">
+   <section class=" bg-blue-700" id="testimoni">
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
          <div class="flex items-center flex-col gap-4">
             <h1 class="text-2xl font-semibold text-center text-slate-100">Testimoni Dari Klien</h1>
@@ -164,7 +158,7 @@
 <x-tim :data="$teams"/>
 <x-pages.artikel :data="$articles"/>
 @if(count($faqs) > 0)
-   <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto">
+   <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="faq">
       <div class="px-4 flex items-center flex-col gap-4">
          <h1 class="text-2xl font-semibold text-center">FAQ</h1>
          <p class="text-center text-sm text-slate-700 dark:text-slate-400 max-w-lg">Ini adalah pertanyaan yang sering ditanyakan kepada kami.</p>
@@ -183,7 +177,7 @@
             </h2>
             <div id="accordion-flush-body-{{$key}}" class="hidden" aria-labelledby="accordion-flush-heading-{{$key}}">
                <div class="py-5 border-b border-slate-200 dark:border-slate-700 text-sm px-2">
-                  <p class="mb-2 text-slate-700 dark:text-slate-400">{{$faq->jawaban}}</p>
+                  <div class="mb-2 text-slate-700 dark:text-slate-400 space-y-4">{!!$faq->jawaban!!}</div>
                </div>
             </div>
             @endforeach
@@ -191,4 +185,5 @@
       </div>
    </section>
    @endif
+   
 </x-guest-layout>

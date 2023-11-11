@@ -30,7 +30,7 @@
                   <p class="text-xs p-[2px] px-2 bg-slate-100 rounded-full text-slate-700 dark:text-slate-700">{{$item->category->name}}</p>
                </div>
                <a href="{{ route("articles.show", $item)}}">
-                  <span class="block mb-2 text-xl font-bold tracking-tight text-blue-600 hover:underline">
+                  <span class="block mb-2 text-xl font-bold tracking-tight hover:underline">
                   {{$item->title}}</span>
                </a>
                <p class="text-sm mb-3 font-normal text-slate-700 dark:text-slate-400">{{$item->summary}}</p>

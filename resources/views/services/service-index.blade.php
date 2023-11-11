@@ -5,7 +5,7 @@
 <!-- Breadcrumb -->
 
 <nav class="flex mb-8" aria-label="Breadcrumb">
-  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+  <ol class="list-none inline-flex items-center space-x-1 md:space-x-3">
     <li class="inline-flex items-center">
       <a href="{{ route("dashboard")}}" class="inline-flex items-center text-sm font-medium text-slate-700 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white">
         <svg class="w-3 h-3 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -90,7 +90,7 @@
 
 <!-- Dropdown menu -->
 <div id="dropdownDotsHorizontal-{{$service->id}}" class="z-10 hidden bg-white divide-y divide-slate-100 rounded-lg shadow w-44 dark:bg-slate-700 dark:divide-slate-600 border border-e-slate-300 dark:border-slate-800">
-    <ul class="py-2 text-sm text-slate-700 dark:text-slate-200" aria-labelledby="dropdownMenuIconHorizontalButton-{{$service->id}}">
+    <ul class="list-none py-2 text-sm text-slate-700 dark:text-slate-200" aria-labelledby="dropdownMenuIconHorizontalButton-{{$service->id}}">
           <li>
         <a href="{{ route("services.show", $service)}}" class="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-600 dark:hover:text-white flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />

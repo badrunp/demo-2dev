@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Tag;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
+use Illuminate\Database\Eloquent\Builder;
 
 class ArticleController extends Controller
 {
@@ -19,7 +20,6 @@ class ArticleController extends Controller
       "articles" => Article::select([
         "id",
         "title",
-        "summary",
         "user_id",
         "category_id",
         "status",
@@ -54,12 +54,12 @@ class ArticleController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:100",
         Rule::unique(Article::class),
       ],
       "category_id" => ["required"],
       "thumbnail" => ["required", "image", "mimes:png,jpg,jpeg"],
-      "summary" => ["required", "min:8", "max:100"],
+      "summary" => ["required", "min:8"],
       "status" => ["nullable"],
       "content" => ["required", "string", "min:3"],
     ]);
@@ -90,7 +90,7 @@ class ArticleController extends Controller
       ->orderBy("created_at", "desc")
       ->limit(6)
       ->get();
-    return view("articles.article-detail", compact("article","articles"));
+    return view("articles.article-detail", compact("article", "articles"));
   }
 
   /**
@@ -117,12 +117,12 @@ class ArticleController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:100",
         Rule::unique(Article::class)->ignore($article->id),
       ],
       "category_id" => ["required"],
       "thumbnail" => ["nullable", "image", "mimes:png,jpg,jpeg"],
-      "summary" => ["required", "min:8", "max:100"],
+      "summary" => ["required", "min:8"],
       "status" => ["nullable"],
       "content" => ["required", "string", "min:3"],
     ]);

@@ -24,6 +24,7 @@ class HomeController extends Controller
         "features",
       ])
         ->where("status", "published")
+        ->orderBy("price", "asc")
         ->get()
         ->groupBy("service.name"),
       "benefits" => Benefit::select(["title", "desc", "icon"])

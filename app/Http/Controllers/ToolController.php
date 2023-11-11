@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tool;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class ToolController extends Controller
 {
@@ -39,7 +40,7 @@ class ToolController extends Controller
         "required",
         "string",
         "min:3",
-        "max:20",
+        "max:50",
         Rule::unique(Tool::class),
       ],
       "desc" => ["nullable", "string", "min:3"],
@@ -75,7 +76,7 @@ class ToolController extends Controller
   public function update(Request $request, Tool $tool)
   {
     $data = $request->validate([
-      "name" => ["required", "string", "min:3", "max:20", Rule::unique(Tool::class)->ignore($tool->id)],
+      "name" => ["required", "string", "min:3", "max:50", Rule::unique(Tool::class)->ignore($tool->id)],
       "desc" => ["nullable", "string", "min:3"],
     ]);
 

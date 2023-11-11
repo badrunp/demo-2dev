@@ -7,7 +7,7 @@
       </div>
       <div>
          <div class="mb-4 border-b border-slate-200 dark:border-slate-700 max-w-4xl mx-auto px-4">
-            <ul class="hide-scroll flex flex-nowrap -mb-px text-sm font-medium text-center overflow-x-scroll" id="daftar-harga" data-tabs-toggle="#daftar-harga-tabs" role="tablist">
+            <ul class="hide-scroll flex flex-nowrap -mb-px text-sm font-medium text-center overflow-x-scroll list-none" id="daftar-harga" data-tabs-toggle="#daftar-harga-tabs" role="tablist">
              
                @foreach($data as $index => $v)
                               <li class="mr-2" role="daftar-harga">
@@ -19,7 +19,7 @@
          <div id="daftar-harga-tabs">
                            @foreach($data as $index2 => $v2)
             <div class="hidden" id="daftar-harga-{{Str::slug($index2)}}" role="tabpanel" aria-labelledby="daftar-harga-{{Str::slug($index2)}}-tab">
-     <div class="flex flex-nowrap items-center xl:justify-center gap-4 overflow-x-auto snap-x px-4 pb-4">
+     <div class="flex flex-nowrap xl:justify-center gap-4 overflow-x-auto snap-x px-4 pb-4">
               @foreach($v2 as $item)
               @php
               $discount = $item->discount ? $item->discount : 0;
@@ -56,7 +56,7 @@
                         <span class="text-5xl font-semibold tracking-tight">@currency($finalPrice)</span>
                      </div>
                      <button type="button" class="mb-2 text-slate-100 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Info Lebih Lanjut</button>
-                     <ul role="list" class="space-y-5 my-7">
+                     <ul role="list" class="space-y-5 my-7 list-none">
                       
                       @foreach($item->features as $feature)
                         

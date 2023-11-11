@@ -9,15 +9,17 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-     
-{{--          <script src="https://cdn.tailwindcss.com"></script>       --}}
-{{--          <script>      --}}
-{{--            tailwind.config = {      --}}
-{{--            darkMode: 'class'       --}}
-{{--          }       --}}
-{{--        </script>    --}}
+           
+{{--         <script src="https://cdn.tailwindcss.com"></script>        --}}
+{{--           <script>       --}}
+{{--             tailwind.config = {       --}}
+{{--             darkMode: 'class'        --}}
+{{--           }        --}}
+{{--         </script>     --}}
+              @stack("head")
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
+      
       <script>
          // On page load or when changing themes, best to add inline in `head` to avoid FOUC
          if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -26,6 +28,7 @@
              document.documentElement.classList.remove('dark')
          }
       </script>
+
    </head>
    <body class=" bg-white dark:bg-slate-950 text-slate-950 dark:text-slate-50 antialiased overflow-x-hidden">
       <header class="navbar w-full fixed top-0 left-0  z-50 flex items-center justify-center border-slate-200 dark:border-slate-800 {{ Request()->routeIs("home") ? "text-slate-100" : ""}}">
@@ -39,7 +42,7 @@
          </a>
          <div class="flex items-center gap-4 sm:gap-2 md:gap-4">
             <nav class="relative hidden sm:block dark:text-slate-400">
-               <ul class="flex items-center gap-1">
+               <ul class="flex items-center gap-1 list-none">
                   <li><a href="/proyek" class="py-2 px-1 md:px-2  rounded text-sm xl:text-base"><span>Proyek</span></a></li>
                   <li><a href="/harga" class="py-2 px-1 md:px-2 rounded text-sm xl:text-base"><span>Harga</span></a></li>
                   <li><a href="/tentang-kami" class="py-2 px-1 md:px-2 rounded text-sm xl:text-base"><span>Tentang Kami</span></a></li>
@@ -53,7 +56,7 @@
                      </button>
                      <!-- Dropdown menu -->
                      <div id="dropdownDivider" class="z-10 hidden bg-white divide-y divide-slate-100 rounded-lg shadow w-44 dark:bg-slate-800 dark:divide-slate-700">
-                        <ul class="py-2 text-sm text-slate-700 dark:text-slate-200" aria-labelledby="dropdownDividerButton">
+                        <ul class="py-2 text-sm text-slate-700 dark:text-slate-200 list-none" aria-labelledby="dropdownDividerButton" style="padding: 0 !important;">
                            <li>
                               <a href="/artikel" class="block px-4 py-2 text-slate-700 dark:text-slate-400">Artikel</a>
                            </li>
@@ -111,7 +114,7 @@
       <div class="font-medium ">{{Auth::user()->name}}</div>
       <div class="truncate">{{ Auth::user()->email}}</div>
     </div>
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 list-none" style="padding: 0 !important;" aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
       <li>
         <a href="{{ route("dashboard")}}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
       </li>
@@ -162,7 +165,7 @@
                      <span class="text-[9px] -mt-1 italic">Tech and Solution</span>
                   </div>
                </a>
-               <ul class="space-y-2 font-medium py-4">
+               <ul class="space-y-2 font-medium py-4 list-none" style="padding: 0 !important;">
                   @php
                   $sideMenus = [
                   [
@@ -251,7 +254,7 @@
                   ];
                   @endphp
                   @if(Auth::check())
-                  <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2">
+                  <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2 list-none" style="padding: 0 !important;">
                      @foreach($sideMenusAuth as $key => $value)
                      <li>
                         <a href="{{$value["url"]}}" class="flex items-center p-2 text-slate-700 rounded-lg dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 group font-normal ">
@@ -277,7 +280,7 @@
                   </ul>
                </ul>
                @else
-               <ul class="py-6 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2">
+               <ul class="py-6 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2 list-none">
                   <li>
                      <a href="{{route("login")}}" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center flex items-center justify-center rounded-full gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -330,7 +333,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 grow">
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm font-medium">Menu</p>
-                  <ul >
+                  <ul class="list-none">
                      <li>
                         <a href="{{route("proyek")}}" class="text-slate-300 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Proyek</a>
                      </li>
@@ -351,7 +354,7 @@
                </div>
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm font-medium">Kontak</p>
-                  <ul>
+                  <ul class="list-none">
                      <li>
                         <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Email</a>
                      </li>
@@ -371,7 +374,7 @@
                </div>
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm font-medium">Legal</p>
-                  <ul>
+                  <ul class="list-none">
                      <li>
                         <a href="{{route("kebijakan-privasi")}}" class="text-slate-200 dark:text-slate-400 text-sm opacity-80 dark:opacity-100">Kebijakan Privasi</a>
                      </li>
@@ -389,7 +392,8 @@
          </div>
          </div>
       </footer>
-{{--   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>    --}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>     --}}
+   @stack("script")
       <script> 
          var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
          var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');

@@ -3,8 +3,8 @@
 
 <!-- Breadcrumb -->
 
-<nav class="flex px-5 py-3 text-slate-700 border border-slate-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700 mb-4" aria-label="Breadcrumb">
-  <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+<nav class="flex px-5 py-3 text-slate-700 border border-slate-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700 mb-6" aria-label="Breadcrumb">
+  <ol class="list-none inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse list-none" style="padding: 0 !important;">
     <li class="inline-flex items-center">
       <a href="{{route("home")}}" class="inline-flex items-center text-sm font-medium text-slate-700 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white">
         <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -22,8 +22,8 @@
       </div>
     </li>
     <li aria-current="page">
-      <div class="flex items-center overflow-x-hidden w-[180px] sm:w-[240px] md:w-full">
-        <svg class="rtl:rotate-180  w-3 h-3 mx-1 text-slate-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+      <div class="flex items-center w-[180px] sm:w-[240px] md:w-full">
+        <svg class="rtl:rotate-180 flex-none  w-3 h-3 mx-1 text-slate-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
         </svg>
         <span class="block ms-1 text-sm font-medium text-slate-500 md:ms-2 dark:text-slate-400 truncate">{{$article->title}}</span>
@@ -32,15 +32,29 @@
   </ol>
 </nav>
 
-<div class="max-w-2xl mx-auto">
-<div class="px-4 space-y-3 mb-3">
- <h1 class="text-3xl font-medium">{{$article->title}}</h1>
+<div class="max-w-3xl mx-auto">
+<div class="px-4 space-y-4 mb-6">
+ <p class="text-xs border border-blue-600 rounded-full py-1 px-3 w-max bg-blue-100 text-blue-800">{{ $article->category->name}}</p>
+ <h1 class="text-2xl font-medium">{{$article->title}}</h1>
  <p class="text-sm text-slate-700 dark:text-slate-400">{{$article->summary}}.</p>
  
- <p class="text-sm text-slate-700 dark:text-slate-400">Oleh <span class="font-semibold text-slate-900 dark:text-slate-100">{{$article->user->name}}</span> • {{$article->created_at->diffForHumans()}}</p>
+                <div class="flex items-center gap-3">
+                @if($article->user->photo)
+                  <img class="w-10 h-10 rounded-full" src="{{asset("/images/profil.jpg")}}" alt="Rounded avatar">
+                  @else
+                  <div class="relative w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+    <svg class="absolute w-14 h-14 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+</div>
+                  @endif
+                  <div>
+                     <h2 class="font-medium text-base">{{$article->user->name}}</h2>
+                     
+                     <p class="text-sm text-slate-700 dark:text-slate-400">{{$article->time_to_read}} • {{$article->created_at->diffForHumans()}}</p></p>
+                  </div>
+               </div>
 </div>
 
-<div class="mb-3">
+<div class="mb-6">
 @if(false)
 <img src="{{asset("storage/", $article->thumbnail )}}" alt="{{$article->title}}" class="w-full bg-contain"/>
 @else
@@ -48,22 +62,22 @@
 @endif
 </div>
 
-<div class="px-4 mb-8 text-sm">
+<div class="px-4 mb-8 text-sm space-y-4 text-slate-800 dark:text-slate-200">
  {!! $article->content !!}
 </div>
 
 <div class="border-t border-slate-300 dark:border-slate-700 py-4 px-4 mb-2">
- <h2 class="text-xl font-medium mb-3">Topik Terkait</h2>
+ <h2 class="text-xl font-medium mb-4">Topik Terkait</h2>
  <div class="flex flex-wrap gap-3"> 
  @foreach($article->tags as $tag)
- <a href="#" class="text-xs px-3.5 py-1.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 border border-slate-300 dark:border-slate-700 hover:bg-slate-300 dark:hover:bg-slate-700">{{$tag->name}}</a>
+ <a href="#" class="text-xs px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 border border-slate-300 dark:border-slate-700 hover:bg-slate-300 dark:hover:bg-slate-700">{{$tag->name}}</a>
  @endforeach
  </div>
 </div>
 
 @if(count($articles) > 0)
 <div class="border-t py-4 border-slate-300 dark:border-slate-700">
- <h2 class="text-xl font-medium mb-3 px-4">Baca Lainya</h2>
+ <h2 class="text-xl font-medium mb-4 px-4">Baca Lainya</h2>
  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 divide-y divide-slate-300 dark:divide-slate-700">
   @foreach($articles as $item)
   <div class="flex items-center gap-4 px-4">
@@ -93,4 +107,13 @@
  
  
  </div>
+ 
+ @push("head")
+ <style>
+  ul,ol {
+   padding: 0 1rem !important;
+  }
+ </style>
+ @endpush
+ 
  </x-guest-layout>
