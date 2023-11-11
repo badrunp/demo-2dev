@@ -62,7 +62,7 @@
 <div class="mt-16 space-y-2 mb-6">
 <p class="text-blue-600 font-medium">{{$project->type->name}}</p>
 <h1 class="text-3xl font-medium">{{$project->name}}</h1>
- <p class="text-sm leading-6 text-slate-700 dark:text-slate-400">{{$project->summary}}.</p>
+ <p class="text-sm leading-6 text-slate-700 dark:text-slate-400">{{$project->summary}}</p>
 </div>
 
 <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 mb-6">
