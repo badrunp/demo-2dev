@@ -165,7 +165,7 @@
                      <span class="text-[9px] -mt-1 italic">Tech and Solution</span>
                   </div>
                </a>
-               <ul class="space-y-2 font-medium py-4 list-none" style="padding: 0 !important;">
+               <ul class="space-y-2 font-medium py-4 list-none" style="padding: 1rem 0 !important;">
                   @php
                   $sideMenus = [
                   [

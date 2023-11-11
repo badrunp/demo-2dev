@@ -68,7 +68,7 @@
 
 <div class="border-t border-slate-300 dark:border-slate-700 py-4 px-4 mb-2">
  <h2 class="text-xl font-medium mb-4">Topik Terkait</h2>
- <div class="flex flex-wrap gap-3"> 
+ <div class="flex flex-wrap gap-2"> 
  @foreach($article->tags as $tag)
  <a href="#" class="text-xs px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 border border-slate-300 dark:border-slate-700 hover:bg-slate-300 dark:hover:bg-slate-700">{{$tag->name}}</a>
  @endforeach
