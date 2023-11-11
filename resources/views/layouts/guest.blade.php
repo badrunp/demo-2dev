@@ -308,7 +308,7 @@
      <section class="bg-blue-700">
       <div class="flex items-center flex-col justify-center gap-6 py-8 px-6">
          <div class="flex flex-col items-center justify-center text-slate-100 gap-1">
-            <h1 class="text-2xl font-bold">Butuh Bantuan?</h1>
+            <h1 class="text-2xl font-bold text-slate-100">Butuh Bantuan?</h1>
             <p class="text-center text-sm text-slate-200">Jangan ragu untuk menghubungi kami setiap hari 24 jam.</p>
          </div>
          <a href="{{route("kontak-kami")}}" class="text-slate-100 bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-full px-5 py-2.5 text-center mr-2 mb-2 text-xs flex items-center gap-2"><span>Hubungi Kami</span>            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
