@@ -7,7 +7,7 @@
          <p class="max-w-lg text-center text-sm {{ Request()->routeIs('tentang-kami') ? 'text-slate-700 dark:text-slate-400' : 'text-slate-200' }}">Dengan kondisi tim yang muda siap berkarya dan berpengalaman, kami siap sedia untuk membangun negeri menjadi lebih baik dan go-digital. Menyasar sektor bidang pasar secara menyeluruh.</p>
       </div>
 
-      <div class="flex items-center justify-center flex-wrap gap-6">
+      <div class="flex items-start justify-center flex-wrap gap-6">
        @foreach($data as $team)
          <div class="flex flex-col gap-4 items-center justify-center">
           @if($team->user->photo)

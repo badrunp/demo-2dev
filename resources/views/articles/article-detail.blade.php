@@ -35,8 +35,8 @@
 <div class="max-w-3xl mx-auto">
 <div class="px-4 space-y-4 mb-6">
  <p class="text-xs border border-blue-600 rounded-full py-1 px-3 w-max bg-blue-100 text-blue-800">{{ $article->category->name}}</p>
- <h1 class="text-2xl font-medium">{{$article->title}}</h1>
- <p class="text-sm text-slate-700 dark:text-slate-400 leading-6">{{$article->summary}}.</p>
+ <h1 class="text-3xl font-semibold">{{$article->title}}</h1>
+ <p class="text-sm text-slate-700 dark:text-slate-400 leading-6 -mt-1">{{$article->summary}}.</p>
  
                 <div class="flex items-center gap-3">
                 @if($article->user->photo)

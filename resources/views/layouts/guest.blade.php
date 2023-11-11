@@ -10,12 +10,12 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
            
-        {{--  <script src="https://cdn.tailwindcss.com"></script>         --}}
-{{--            <script>       --}}
-{{--              tailwind.config = {        --}}
-{{--              darkMode: 'class'         --}}
-{{--            }        --}}
-{{--          </script>      --}}
+{{--           <script src="https://cdn.tailwindcss.com"></script>          --}}
+{{--             <script>        --}}
+{{--              tailwind.config = {         --}}
+{{--               darkMode: 'class'          --}}
+{{--             }         --}}
+{{--           </script>       --}}
               @stack("head")
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -167,7 +167,7 @@
                      <span class="text-[9px] -mt-1 italic">Tech and Solution</span>
                   </div>
                </a>
-               <ul class="space-y-2 font-medium py-4 list-none" style="padding: 1rem 0 !important;">
+               <ul class="space-y-2 font-medium list-none" style="padding: 1rem 0 !important;">
                   @php
                   $sideMenus = [
                   [
@@ -230,7 +230,9 @@
                      <span class="ml-3">{{ $value["label"] }}</span>
                      </a>
                   </li>
+                 
                   @endforeach
+                  </ul>
 
                   @php
                   $sideMenusAuth = [
@@ -256,10 +258,10 @@
                   ];
                   @endphp
                   @if(Auth::check())
-                  <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2 list-none" style="padding: 0 !important;">
+                  <ul class="pt-4 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2 list-none" style="padding: 1rem 0 !important;">
                      @foreach($sideMenusAuth as $key => $value)
                      <li>
-                        <a href="{{$value["url"]}}" class="flex items-center p-2 text-slate-700 rounded-lg dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 group font-normal ">
+                        <a href="{{$value["url"]}}" class="flex items-center p-2 text-slate-700 rounded-lg dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 group font-normal">
                         {!!$value["icon"]!!}
                         <span class="ml-3">{{ $value["label"] }}</span>
                         </a>
@@ -337,7 +339,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 grow">
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm leading-6  font-medium">Menu</p>
-                  <ul class="list-none">
+                  <ul class="list-none" style="padding: 0 !important;">
                      <li>
                         <a href="{{route("proyek")}}" class="text-slate-300 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Proyek</a>
                      </li>
@@ -358,7 +360,7 @@
                </div>
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm leading-6  font-medium">Kontak</p>
-                  <ul class="list-none">
+                  <ul class="list-none" style="padding: 0 !important;">
                      <li>
                         <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Email</a>
                      </li>
@@ -378,7 +380,7 @@
                </div>
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm leading-6  font-medium">Legal</p>
-                  <ul class="list-none">
+                  <ul class="list-none" style="padding: 0 !important;">
                      <li>
                         <a href="{{route("kebijakan-privasi")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Kebijakan Privasi</a>
                      </li>
@@ -394,7 +396,7 @@
          </div>
          <div class="hidden dark:block bg-blue-600  w-[200px] h-[200px] absolute bottom-[50px] -right-[50px] rounded-full -z-10 blur-3xl opacity-10">
          </div>
-         </div>
+
       </footer>
 {{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>     --}}
    @stack("script")
