@@ -82,7 +82,7 @@
   @foreach($articles as $item)
   <div class="flex items-center gap-4 px-4">
    <div class="space-y-2 flex-1 py-6">
-    <a href="{{route("articles.show", $item)}}" class="font-semibold text-lg text-blue-600 hover:underline">{{$item->title}}</a>
+    <a href="{{route("articles.show", $item)}}" class="font-semibold hover:underline">{{$item->title}}</a>
     <p class="text-sm text-slate-700 dark:text-slate-400">{{$item->created_at->diffForHumans()}} • {{$item->category->name}}</p>
    </div>
    
@@ -111,7 +111,7 @@
  @push("head")
  <style>
   ul,ol {
-   padding: 0 1rem !important;
+   padding: 0 1.5rem !important;
   }
  </style>
  @endpush

@@ -185,5 +185,11 @@
       </div>
    </section>
    @endif
-   
+    @push("head")
+ <style>
+  ul,ol {
+   padding: 0 1.5rem !important;
+  }
+ </style>
+ @endpush
 </x-guest-layout>
