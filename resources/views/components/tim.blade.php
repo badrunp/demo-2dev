@@ -41,7 +41,7 @@
                @endif
                 @if($team->user->linkedin_url)
                <a href="{{$team->user->linkedin_url}}" target="_blank">
-               <img src="{{asset('/images/social/linkedin.png')}}" alt="" class="w-6 h-6" />
+               <img src="{{asset('/images/contact/linkedin-d.png')}}" alt="" class="w-6 h-6" />
                </a>
                @endif
             </div>
