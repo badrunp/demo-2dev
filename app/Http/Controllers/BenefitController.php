@@ -35,7 +35,7 @@ class BenefitController extends Controller
   public function store(Request $request)
   {
     $data = $request->validate([
-      "title" => ["required", "string", "min:3", "max:20"],
+      "title" => ["required", "string", "min:3", "max:50"],
       "desc" => ["required", "string", "min:3"],
       "icon" => ["required", "string", "min:3"],
     ]);
@@ -70,7 +70,7 @@ class BenefitController extends Controller
   public function update(Request $request, Benefit $benefit)
   {
     $data = $request->validate([
-      "title" => ["required", "string", "min:3", "max:20"],
+      "title" => ["required", "string", "min:3", "max:50"],
       "desc" => ["required", "string", "min:3"],
       "icon" => ["required", "string", "min:3"],
     ]);
