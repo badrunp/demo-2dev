@@ -11,7 +11,9 @@
 </div>
 </section>
 
-<section class="relative bg-blue-700">
+<section class="relative bg-blue-700 py-10 md:py-24 lg:py-28">
+         <x-water-effect position="bottom"/>
+        <x-water-effect position="top"/>
 <div class="py-16 px-4 max-w-4xl w-full mx-auto flex flex flex-col gap-6">
 <h1 class="text-2xl font-semibold text-slate-100">Profil Duos Dev</h1>
 <div class="space-y-2">

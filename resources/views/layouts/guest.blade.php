@@ -10,12 +10,12 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
            
-       {{--    <script src="https://cdn.tailwindcss.com"></script>           --}}
-{{--             <script>        --}}
-{{--              tailwind.config = {         --}}
-{{--               darkMode: 'class'          --}}
-{{--             }         --}}
-{{--           </script>       --}}
+{{--            <script src="https://cdn.tailwindcss.com"></script>            --}}
+{{--              <script>         --}}
+{{--               tailwind.config = {          --}}
+{{--                darkMode: 'class'           --}}
+{{--              }         --}}
+{{--            </script>        --}}
               @stack("head")
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -31,7 +31,7 @@
 
    </head>
    <body class=" bg-white dark:bg-slate-950 text-slate-950 dark:text-slate-50 antialiased overflow-x-hidden">
-      <header class="navbar w-full fixed top-0 left-0  z-50 flex items-center justify-center border-slate-200 dark:border-slate-800 {{ Request()->routeIs("home") ? "text-slate-100" : ""}}">
+      <header class="navbar w-full fixed top-0 left-0  z-50 flex items-center justify-center border-slate-200 dark:border-slate-800 {{ Request()->routeIs("home") ? "text-slate-100 pt-2 px-1" : ""}}">
       <div class="w-full max-w-4xl 0 flex items-center justify-between px-4 py-3 sm:py-4">
          <a href="/" class="flex items-center gap-2 shrink">
             <image src="{{ asset('/images/duosdev.png')}}" width="44" height="44" />
@@ -40,7 +40,7 @@
                <span class="text-[9px] -mt-1 italic">Tech and Solution</span>
             </div>
          </a>
-         <div class="flex items-center gap-4 sm:gap-2 md:gap-4">
+         <div class="flex items-center gap-5 sm:gap-2 md:gap-4">
             <nav class="relative hidden sm:block dark:text-slate-400">
                <ul class="flex items-center gap-1 list-none">
                   <li><a href="/proyek" class="py-2 px-1 md:px-2  rounded text-sm leading-6  xl:text-base"><span>Proyek</span></a></li>
@@ -83,16 +83,16 @@
             
             
             <button id="theme-toggle" type="button" class="  rounded-lg text-sm leading-6 ">
-               <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                </svg>
-               <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                </svg>
             </button>
             <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center text-sm leading-6   rounded-lg sm:hidden focus:outline-none">
                <span class="sr-only">Open sidebar</span>
-               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <svg class="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                </svg>
             </button>
@@ -159,7 +159,7 @@
                </svg>
                <span class="sr-only">Close menu</span>
             </button>
-            <div class="h-full px-3 py-4 overflow-y-auto bg-slate-50 dark:bg-slate-950">
+            <div class=" h-full px-3 py-4 overflow-y-auto bg-slate-50 dark:bg-slate-950">
                <a href="/" class="flex items-center gap-2 shrink py-2">
                   <image src="{{ asset('/images/duosdev.png')}}" width="44" height="44" />
                   <div class="flex flex-col justify-center items-start text-slate-950 dark:text-slate-100">
@@ -305,26 +305,50 @@
                   @endif
                </ul>
                @endif
-            </div>
+                            <ul class="py-6 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2 list-none" style="padding: 1rem 0 !important">
+                           <li class="w-full flex items-center flex-wrap gap-4 mt-4 px-2 justify-center">
+                <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm leading-6 " class="rounded-full">
+                 <img src="{{ asset("images/contact/email-d.png") }}" alt="facebook" class="w-8 h-8"/>
+                </a>
+                                
+                                <a href="https://www.github.com/duosdev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  " class="rounded-full">
+                 <img src="{{ asset("images/contact/github-d.png") }}" alt="facebook" class="w-8 h-8"/>
+                </a>
+                                <a href="https://instagram.com/duos_dev?igshid=OGQ5ZDc2ODk2ZA==" class="text-slate-200 dark:text-slate-400 text-sm leading-6  " class="rounded-full">
+                 <img src="{{ asset("images/contact/instagram-d.png") }}" alt="facebook" class="w-8 h-8"/>
+                </a>
+                                <a href="https://facebook.com/profile.php?id=100088171750481" class="text-slate-200 dark:text-slate-400 text-sm leading-6  " class="rounded-full">
+                 <img src="{{ asset("images/contact/facebook-d.png") }}" alt="facebook" class="w-8 h-8"/>
+                </a>
+<a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  " class="rounded-full">
+                 <img src="{{ asset("images/contact/wa-d.png") }}" alt="facebook" class="w-8 h-8"/>
+                </a>
+               </li>
+               </ul>
+         </div>
          </aside>
          </div>
       </header>
       {{ $slot }}
       @if(!Request()->routeIs("kontak-kami"))
-     <section class="bg-blue-700">
+     <section class="relative bg-blue-700 pt-10 md:pt-24 lg:pt-28">
+<x-water-effect/>
       <div class="flex items-center flex-col justify-center gap-6 py-8 px-6">
          <div class="flex flex-col items-center justify-center text-slate-100 gap-1">
             <h1 class="text-2xl font-bold text-slate-100">Butuh Bantuan?</h1>
-            <p class="text-center text-sm leading-6  text-slate-200">Jangan ragu untuk menghubungi kami setiap hari 24 jam.</p>
+            <p class="text-center text-sm leading-6  text-slate-200 tracking-wide">Jangan ragu untuk menghubungi kami setiap hari 24 jam.</p>
          </div>
-         <a href="{{route("kontak-kami")}}" class="text-slate-100 bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-full px-5 py-2.5 text-center mr-2 mb-2 text-xs flex items-center gap-2"><span>Hubungi Kami</span>            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+         <a href="{{route("kontak-kami")}}" class="text-slate-100 bg-teal-500 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-full px-6 py-2.5 text-center mr-2 mb-2 text-xs flex items-center gap-2"><span>Hubungi Kami</span>            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
             </svg></a>
       </div>
    </section>
    @endif
-      <footer class="relative border-t border-blue-800 dark:border-slate-700 overflow-hidden bg-blue-800 dark:bg-transparent text-white">
-      <div class="px-4 py-16 flex flex-col gap-16 max-w-4xl mx-auto">
+      <footer @class(["relative border-blue-800 dark:border-slate-700 overflow-hidden bg-blue-800 dark:bg-transparent text-white", "pt-10 md:pt-24 lg:pt-28" => Request()->routeIs("kontak-kami"), "border-t" => !Request()->routeIs("kontak-kami")]) >
+       @if(Request()->routeIs("kontak-kami"))
+       <x-water-effect/>
+       @endif
+      <div class="px-4 py-16 flex flex-col gap-16 max-w-4xl mx-auto ">
          <div class="flex flex-col md:flex-row gap-6">
             <div class="flex flex-col gap-3 max-w-sm">
                <a href="{{route("home")}}" class="flex items-center gap-2 shrink py-2">
@@ -334,64 +358,64 @@
                      <span class="text-[9px] -mt-1 italic">Tech and Solution</span>
                   </div>
                </a>
-               <p class="text-sm leading-6  text-slate-200 opacity-80 dark:opacity-100 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman.</p>
+               <p class="text-sm leading-6 tracking-wide text-slate-200 dark:text-slate-400">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman.</p>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 grow">
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm leading-6  font-medium">Menu</p>
-                  <ul class="list-none" style="padding: 0 !important;">
+                  <ul class="list-none tracking-wide" style="padding: 0 !important;">
                      <li>
-                        <a href="{{route("proyek")}}" class="text-slate-300 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Proyek</a>
+                        <a href="{{route("proyek")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Proyek</a>
                      </li>
                      <li>
-                        <a href="{{route("harga")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Harga</a>
+                        <a href="{{route("harga")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Harga</a>
                      </li>
                      
                      <li>
-                     <a href="{{route("tentang-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Tentang Kami</a>
+                     <a href="{{route("tentang-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Tentang Kami</a>
                      </li>
 <li>
-                     <a href="{{route("artikel")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Artikel</a>
+                     <a href="{{route("artikel")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Artikel</a>
                      </li>
                      <li>
-                        <a href="{{route("kontak-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Kontak Kami</a>
+                        <a href="{{route("kontak-kami")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Kontak Kami</a>
                      </li>
                   </ul>
                </div>
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm leading-6  font-medium">Kontak</p>
-                  <ul class="list-none" style="padding: 0 !important;">
+                  <ul class="list-none tracking-wide" style="padding: 0 !important;">
                      <li>
-                        <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Email</a>
-                     </li>
-                     <li>
-                        <a href="https://www.github.com/duosdev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Github</a>
+                        <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Email</a>
                      </li>
                      <li>
-                        <a href="https://instagram.com/duos_dev?igshid=OGQ5ZDc2ODk2ZA==" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Instagram</a>
+                        <a href="https://www.github.com/duosdev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Github</a>
                      </li>
                      <li>
-                        <a href="https://facebook.com/profile.php?id=100088171750481" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Facebook</a>
+                        <a href="https://instagram.com/duos_dev?igshid=OGQ5ZDc2ODk2ZA==" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Instagram</a>
+                     </li>
+                     <li>
+                        <a href="https://facebook.com/profile.php?id=100088171750481" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Facebook</a>
                      </li>
                      </li>
-                     <a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">WhatsApp</a>
+                     <a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">WhatsApp</a>
                      </li>
                   </ul>
                </div>
                <div class="flex flex-col gap-1.5">
                   <p class="text-sm leading-6  font-medium">Legal</p>
-                  <ul class="list-none" style="padding: 0 !important;">
+                  <ul class="list-none tracking-wide" style="padding: 0 !important;">
                      <li>
-                        <a href="{{route("kebijakan-privasi")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Kebijakan Privasi</a>
+                        <a href="{{route("kebijakan-privasi")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Kebijakan Privasi</a>
                      </li>
                      <li>
-                        <a href="{{route("penggunaan-cookies")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  opacity-80 dark:opacity-100">Penggunaan Cookies</a>
+                        <a href="{{route("penggunaan-cookies")}}" class="text-slate-200 dark:text-slate-400 text-sm leading-6  ">Penggunaan Cookies</a>
                      </li>
                   </ul>
                </div>
             </div>
          </div>
-         <p class="text-center text-xs opacity-80">© 2023 Duos Dev. All Rights Reserved</p>
+         <p class="text-center tracking-wide text-xs text-slate-200 dark:text-slate-400">© 2023 Duos Dev. All Rights Reserved</p>
          <div class="hidden dark:block bg-gradient-to-tr from-blue-600 via-transparent to-transparent w-[800px] h-[800px] absolute -bottom-[200px] -left-[200px] rounded-full -z-10 blur-3xl opacity-50">
          </div>
          <div class="hidden dark:block bg-blue-600  w-[200px] h-[200px] absolute bottom-[50px] -right-[50px] rounded-full -z-10 blur-3xl opacity-10">
@@ -459,7 +483,7 @@
          navbar.classList.remove('backdrop-blur-sm');
          
          @if(Request()->routeIs("home"))
-         navbar.classList.add('text-slate-100')
+         navbar.classList.add("text-slate-100", "pt-2", "px-1")
          @endif
          
        
@@ -476,7 +500,7 @@
          navbar.classList.add('bg-white/80');
          navbar.classList.add('dark:bg-slate-950/80');
          navbar.classList.add('backdrop-blur-sm');
-         navbar.classList.remove('text-slate-100')
+         navbar.classList.remove('text-slate-100', "pt-2", "px-1")
          }
          
          // update previous scroll position

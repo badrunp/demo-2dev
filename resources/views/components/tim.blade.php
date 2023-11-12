@@ -1,6 +1,11 @@
 @props(["data" => []])
       @if(count($data) > 0)
-   <section class="{{ Request()->routeIs('tentang-kami') ? '' : 'bg-blue-700'}} ">
+   <section class="relative {{ Request()->routeIs('tentang-kami') ? '' : 'bg-blue-700 py-10 md:py-24 lg:py-28'}} ">
+    @if(!Request()->routeIs('tentang-kami'))
+        <x-water-effect position="bottom"/>
+        <x-water-effect position="top"/>
+    @endif
+
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
       <div class="px-4 flex items-center flex-col gap-4">
          <h1 class=" text-2xl font-semibold text-center {{ Request()->routeIs('tentang-kami') ? '' : 'text-slate-100' }}">Tim Kami</h1>
@@ -26,12 +31,12 @@
             <div class="flex items-center gap-2">
              @if($team->user->email)
                <a href="mailto:{{$team->user->email}}" target="_blank">
-               <img src="{{asset('/images/social/email.png')}}" alt="" class="w-6 h-6" />
+               <img src="{{asset('/images/contact/email-d.png')}}" alt="" class="w-6 h-6" />
                </a>
                @endif
                @if($team->user->github_url)
                <a href="{{$team->user->guthub_url}}">
-               <img src="{{asset('/images/social/github.png')}}" alt="" class="w-6 h-6" />
+               <img src="{{asset('/images/contact/github-d.png')}}" alt="" class="w-6 h-6" />
                </a>
                @endif
                 @if($team->user->linkedin_url)

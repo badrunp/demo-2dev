@@ -2,6 +2,7 @@
 <div class="mt-[60px]">
 
  <section class="relative max-w-4xl w-full mx-auto px-4 py-16">
+  
   @if(session()->has("success"))
 <div id="alert-border-3" class="flex items-center p-4 mb-4 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800" role="alert">
     <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

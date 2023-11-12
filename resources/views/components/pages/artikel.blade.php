@@ -1,6 +1,6 @@
 @props(["data" => []])
 @if(count($data) > 0)
-   <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto">
+   <section class="px-4 py-16 flex flex-col gap-8 max-w-5xl mx-auto">
       <div class="flex items-center justify-between gap-4">
          <h1 class="text-2xl font-semibold">Artikel Terbaru</h1>
          @if(!Request()->routeIs("artikel"))

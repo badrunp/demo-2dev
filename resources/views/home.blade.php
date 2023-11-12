@@ -1,19 +1,44 @@
 <x-guest-layout>
-   <section class="relative min-h-screen sm:h-[700px] sm:min-h-0 w-full flex items-center justify-center flex-col px-6 overflow-hidden bg-blue-700 dark:bg-transparent" id="jumbotron">
+   <section class="relative min-h-[110vh] md:h-[700px] md:min-h-0 w-full flex items-center justify-center flex-col px-6 overflow-hidden bg-blue-700 dark:bg-transparent" id="jumbotron">
       <div class="hidden dark:block w-[500px] md:w-[600px] lg:w-[800px] h-[500px] md:h-[800px] lg:w-[1000px] rounded-full bg-gradient-to-bl from-blue-600 to-transparent absolute top-0 -right-[200px] -z-10 blur-3xl opacity-20"></div>
-      <div class="flex flex-col justify-center items-center gap-6 sm:max-w-md md:max-w-lg">
-         <h1 id="jumbotron-title" class="text-4xl font-semibold text-center text-slate-100">Kami Siap Membuat Website</span> Impian Anda</h1>
-         <p class="text-slate-200 dark:text-slate-400 text-center opacity-80 dark:opacity-100">Kami hadir untuk membantu mewujudkan website impian Anda yang siap Go-Digital dari lokal hingga internasional</p>
+      <div class="flex gap-8 flex-col md:flex-row items-center max-w-4xl md:px-4">
+      <div class="flex flex-col justify-center items-center md:items-start gap-4 md:gap-6 sm:max-w-md md:max-w-lg">
+         <h1 id="jumbotron-title" class="text-4xl font-semibold text-center md:text-left text-slate-100">Kami Siap Membuat Website</span> Impian Anda</h1>
+         <p class="text-slate-200 dark:text-slate-400 text-center md:text-left">Kami hadir untuk membantu mewujudkan website impian Anda yang siap Go-Digital dari lokal hingga internasional</p>
          <a href="{{route("harga")}}" class="w-max mt-2 text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 dark:hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm leading-6  px-10 py-3 text-center flex items-center gap-2 font-medium">
             <span>Lihat Harga</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
             </svg>
          </a>
+         </div>
+         
+         <img src="{{asset("images/hero.png")}}" alt="hero" class="w-[420px] lg:w-[520px]"/>
+      </div>
+      <div class="dark:hidden w-full h-[1px] bg-white bottom-0 left-0 absolute"></div>
+         <div class="dark:hidden absolute bottom-0 left-0 w-full">
+      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"
+            ></path>
+            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+          </g>
+          <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path
+              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+            ></path>
+          </g>
+        </g>
+      </svg>
       </div>
    </section>
-   <section class="px-4 py-16" id="tentang-kami">
-      <div class=" flex flex-col gap-4 max-w-4xl mx-auto">
+
+   <section class="py-16" id="tentang-kami">
+      <div class=" flex flex-col gap-4 max-w-4xl mx-auto px-4">
          <h1 class="tentang-kami-title text-2xl font-semibold text-center">Tentang Kami</h1>
          <p class="text-sm leading-6  text-slate-700 dark:text-slate-400 leading-6">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman. Dengan bermodal pengetahuan dan jam terbang yang kami miliki, kami siap menjawab kebutuhan masyarakat terlebih untuk perusahaan dalam pembuatan website untuk kemajuan usahanya.</p>
          <a href="{{route("tentang-kami")}}" class="mt-2 w-max ml-auto md:ml-0 text-sm leading-6  font-medium text-blue-600 flex items-center gap-2 focus:underline hover:underline">
@@ -53,7 +78,9 @@
    </section>
    @endif
   <x-pages.harga :data="$products" />
-   <section class=" bg-blue-700" id="quote">
+   <section class=" bg-blue-700 relative py-10 md:py-24 lg:py-28" id="quote">
+            <x-water-effect position="bottom"/>
+        <x-water-effect position="top"/>
       <div class="px-4 py-16 flex flex-col gap-4 overflow-x-hidden max-w-4xl mx-auto">
          <div class="relative">
             <div class="translate-x-4 sm:translate-x-16">
@@ -86,10 +113,13 @@
    @if(count($benefits) > 0)
    <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="benefit">
       <h1 class="text-2xl font-semibold text-center">Kenapa Menggunakan <br/> Jasa Duos Dev</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
        @foreach($benefits as $benefit)
          <div class="block p-6  bg-white border border-slate-200 rounded-lg shadow  dark:bg-slate-800 dark:border-slate-700 flex flex-col items-center gap-2">
-            {!! $benefit->icon !!}
+         
+              {!! $benefit->icon !!}
+         
+
             <h5 class="text-base font-semibold tracking-tight">{{$benefit->title}}</h5>
             <p class="text-sm leading-6  text-center font-normal text-slate-700 dark:text-slate-400">{{$benefit->desc}}</p>
          </div>
@@ -99,7 +129,9 @@
    @endif
    
    @if(count($testimonis) >= 2)
-   <section class=" bg-blue-700" id="testimoni">
+   <section class=" bg-blue-700 relative py-10 md:py-24 lg:py-28" id="testimoni">
+                <x-water-effect position="bottom"/>
+        <x-water-effect position="top"/>
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
          <div class="flex items-center flex-col gap-4">
             <h1 class="text-2xl font-semibold text-center text-slate-100">Testimoni Dari Klien</h1>

@@ -78,7 +78,7 @@
 @if(count($articles) > 0)
 <div class="border-t py-4 border-slate-300 dark:border-slate-700">
  <h2 class="text-xl font-medium mb-4 px-4">Baca Lainya</h2>
- <div class="grid grid-cols-1 md:grid-cols-2 gap-2 divide-y divide-slate-300 dark:divide-slate-700">
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-2 divide-y divide-slate-300 md:divide-y-0 dark:divide-slate-700">
   @foreach($articles as $item)
   <div class="flex items-center gap-4 px-4">
    <div class="space-y-2 flex-1 py-6">

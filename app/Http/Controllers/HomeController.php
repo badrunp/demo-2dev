@@ -50,9 +50,11 @@ class HomeController extends Controller
         ->orderBy("id", "desc")
         ->get(),
       "articles" => Article::where("status", true)
+            ->orderBy("created_at", "desc")
         ->limit(6)
         ->get(),
       "projects" => Project::with(["type:id,name"])
+            ->orderBy("created_at", "desc")
         ->where("status", true)
         ->limit(6)
         ->get()
