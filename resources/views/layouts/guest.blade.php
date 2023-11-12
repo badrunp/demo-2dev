@@ -10,7 +10,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
            
-{{--           <script src="https://cdn.tailwindcss.com"></script>          --}}
+          <script src="https://cdn.tailwindcss.com"></script>          
 {{--             <script>        --}}
 {{--              tailwind.config = {         --}}
 {{--               darkMode: 'class'          --}}
@@ -284,7 +284,7 @@
                   </ul>
                </ul>
                @else
-               <ul class="py-6 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2 list-none">
+               <ul class="py-6 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2 list-none" style="padding: 1rem 0 !important">
                   <li>
                      <a href="{{route("login")}}" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm leading-6  px-5 py-2.5 text-center flex items-center justify-center rounded-full gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
