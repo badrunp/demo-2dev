@@ -167,9 +167,9 @@
          <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-100" data-inactive-classes="text-slate-1000 dark:text-slate-400">
           @foreach($faqs as $key => $faq)
           
-            <h2 id="accordion-flush-heading-{{$key}} text-base">
+            <h2 id="accordion-flush-heading-{{$key}} ">
                <button type="button" class="flex items-center justify-between w-full py-5 text-left text-slate-700 border-b border-slate-200 dark:border-slate-700 dark:text-slate-400 px-2" data-accordion-target="#accordion-flush-body-{{$key}}" aria-expanded="{{ $key == 0 ? 'true' : 'false'}}" aria-controls="accordion-flush-body-{{$key}}">
-                  <span>{{$faq->pertanyaan}}</span>
+                  <span class="text-base">{{$faq->pertanyaan}}</span>
                   <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
                   </svg>
