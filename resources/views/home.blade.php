@@ -1,5 +1,5 @@
 <x-guest-layout>
-   <section class="relative min-h-[115vh] md:h-[700px] md:min-h-0 w-full flex items-center justify-center flex-col px-6 overflow-hidden bg-blue-700 dark:bg-transparent" id="jumbotron">
+   <section class="relative min-h-[110vh] md:h-[700px] md:min-h-0 w-full flex items-center justify-center flex-col px-6 overflow-hidden bg-blue-700 dark:bg-transparent" id="jumbotron">
       <div class="hidden dark:block w-[500px] md:w-[600px] lg:w-[800px] h-[500px] md:h-[800px] lg:w-[1000px] rounded-full bg-gradient-to-bl from-blue-600 to-transparent absolute top-0 -right-[200px] -z-10 blur-3xl opacity-20"></div>
       <div class="flex gap-12 md:gap-8 flex-col md:flex-row items-center max-w-4xl md:px-4">
       <div class="flex flex-col justify-center items-center md:items-start gap-4 md:gap-6 sm:max-w-md md:max-w-lg">
