@@ -3,7 +3,7 @@
       <div class="hidden dark:block w-[500px] md:w-[600px] lg:w-[800px] h-[500px] md:h-[800px] lg:w-[1000px] rounded-full bg-gradient-to-bl from-blue-600 to-transparent absolute top-0 -right-[200px] -z-10 blur-3xl opacity-20"></div>
       <div class="flex gap-12 md:gap-8 flex-col md:flex-row items-center max-w-4xl md:px-4">
       <div class="flex flex-col justify-center items-center md:items-start gap-4 md:gap-6 sm:max-w-md md:max-w-lg">
-         <h1 data-aos="fade-right" id="jumbotron-title" class="text-4xl font-semibold text-center md:text-left text-slate-100">Kami Siap Membuat <p class="typewrite inline-block text-teal-400 dark:text-blue-600" data-period="2000" data-type='[ "Website" ]'>Website</p> <br/>Impian Anda</h1>
+         <h1 data-aos="fade-right" id="jumbotron-title" class="text-4xl font-semibold text-center md:text-left text-slate-100">Kami Siap Membuat <p class="typewrite inline-block text-teal-400 dark:text-blue-600" data-period="2000" data-type='[ "Website" ]'>Website</p> <br class="md:hidden"/>Impian Anda</h1>
          <p data-aos="fade-down" data-aos-delay="200" class="text-slate-200 dark:text-slate-400 text-center md:text-left" >Kami hadir untuk membantu mewujudkan website impian Anda yang siap Go-Digital dari lokal hingga internasional</p>
          <a data-aos="fade-up" data-aos-delay="400" href="{{route("harga")}}" class="w-max mt-2 text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 dark:hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm leading-6  px-10 py-3 text-center flex items-center gap-2 font-medium">
             <span>Lihat Harga</span>
@@ -58,7 +58,7 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
        @foreach($products as $service)
-         <div class="p-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l rounded-lg">
+         <div class="p-4 bg-blue-700 rounded-lg">
             @if(false)
                     <image src="{{asset("storage/" . $service[0]->service->photo)}}" alt="{{$service[0]->service->name}}" class="w-8 h-8 rounded-full mb-2" />
                     @else

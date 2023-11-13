@@ -5,7 +5,7 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
     
     <div class="mb-8">
-         <h1 class="text-2xl font-medium">Login</h1>
+         <h1 class="text-2xl font-medium mb-1">Login</h1>
          <p class="text-sm text-slate-700 dark:text-slate-400">Selamat datang kembali, masukkan kredensial Anda untuk melanjutkan.</p>
     </div>
 

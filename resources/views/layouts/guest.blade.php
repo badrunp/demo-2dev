@@ -11,11 +11,10 @@
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
            
 {{--            <script src="https://cdn.tailwindcss.com"></script>             --}}
-{{--              <script>          --}}
+{{--             <script>           --}}
 {{--               tailwind.config = {           --}}
-{{--                darkMode: 'class'            --}}
-{{--               }         --}}
-{{--            </script>        --}}
+{{--                 darkMode: 'class'                           }          --}}
+{{--                 </script>         --}}
               @stack("head")
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
