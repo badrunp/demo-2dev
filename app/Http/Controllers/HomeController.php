@@ -47,7 +47,6 @@ class HomeController extends Controller
         ->where("status", "active")
         ->get(),
       "faqs" => Faq::select(["pertanyaan", "jawaban"])
-        ->orderBy("id", "desc")
         ->get(),
       "articles" => Article::where("status", true)
             ->orderBy("created_at", "desc")

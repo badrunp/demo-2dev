@@ -10,11 +10,11 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
            
-{{--            <script src="https://cdn.tailwindcss.com"></script>             --}}
-{{--             <script>           --}}
-{{--               tailwind.config = {           --}}
-{{--                 darkMode: 'class'                           }          --}}
-{{--                 </script>         --}}
+{{--             <script src="https://cdn.tailwindcss.com"></script>              --}}
+{{--              <script>            --}}
+{{--                tailwind.config = {            --}}
+{{--                  darkMode: 'class'                           }           --}}
+{{--                  </script>          --}}
               @stack("head")
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -306,21 +306,21 @@
                @endif
                             <ul class="py-6 space-y-2 font-medium border-t border-slate-200 dark:border-slate-700 flex flex-col gap-2 list-none" style="padding: 1rem 0 !important">
                            <li class="w-full flex items-center flex-wrap gap-4 mt-4 px-2 justify-center">
-                <a href="mailto:duosdevofficial@gmail.com" class="text-slate-200 dark:text-slate-400 text-sm leading-6 " class="rounded-full">
-                 <img src="{{ asset("images/contact/email-d.png") }}" alt="facebook" class="w-8 h-8"/>
+                <a href="mailto:duosdevofficial@gmail.com" class="p-2 rounded-full bg-blue-700 hover:bg-blue-800" class="rounded-full">
+                 <img src="{{ asset("images/icon/email-d2.png") }}" alt="facebook" class="w-5 h-5"/>
                 </a>
                                 
-                                <a href="https://www.github.com/duosdev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  " class="rounded-full">
-                 <img src="{{ asset("images/contact/github-d.png") }}" alt="facebook" class="w-8 h-8"/>
+                                <a href="https://www.github.com/duosdev" class="p-2 rounded-full bg-blue-700 hover:bg-blue-800">
+                 <img src="{{ asset("images/icon/github-d2.png") }}" alt="facebook" class="w-5 h-5"/>
                 </a>
-                                <a href="https://instagram.com/duos_dev?igshid=OGQ5ZDc2ODk2ZA==" class="text-slate-200 dark:text-slate-400 text-sm leading-6  " class="rounded-full">
-                 <img src="{{ asset("images/contact/instagram-d.png") }}" alt="facebook" class="w-8 h-8"/>
+                                <a href="https://instagram.com/duos_dev?igshid=OGQ5ZDc2ODk2ZA==" class="p-2 rounded-full bg-blue-700 hover:bg-blue-800">
+                 <img src="{{ asset("images/icon/instagram-d2.png") }}" alt="facebook" class="w-5 h-5"/>
                 </a>
-                                <a href="https://facebook.com/profile.php?id=100088171750481" class="text-slate-200 dark:text-slate-400 text-sm leading-6  " class="rounded-full">
-                 <img src="{{ asset("images/contact/facebook-d.png") }}" alt="facebook" class="w-8 h-8"/>
+                                <a href="https://facebook.com/profile.php?id=100088171750481" class="p-2 rounded-full bg-blue-700 hover:bg-blue-800">
+                 <img src="{{ asset("images/icon/facebook-d2.png") }}" alt="facebook" class="w-5 h-5"/>
                 </a>
-<a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="text-slate-200 dark:text-slate-400 text-sm leading-6  " class="rounded-full">
-                 <img src="{{ asset("images/contact/wa-d.png") }}" alt="facebook" class="w-8 h-8"/>
+<a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="p-2 rounded-full bg-blue-700 hover:bg-blue-800">
+                 <img src="{{ asset("images/icon/wa-d2.png") }}" alt="facebook" class="w-5 h-5"/>
                 </a>
                </li>
                </ul>

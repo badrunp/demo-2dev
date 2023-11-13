@@ -7,7 +7,7 @@
       </div>
       <div>
          <div class="mb-4 border-b border-slate-200 dark:border-slate-700 max-w-4xl mx-auto px-4">
-            <ul class="hide-scroll flex flex-nowrap -mb-px text-sm font-medium text-center overflow-x-scroll list-none" id="daftar-harga" data-tabs-toggle="#daftar-harga-tabs" role="tablist">
+            <ul class="hide-scroll flex flex-nowrap -mb-px text-sm font-medium text-center overflow-x-scroll list-none" style="padding: 0 !important" id="daftar-harga" data-tabs-toggle="#daftar-harga-tabs" role="tablist">
              
                @foreach($data as $index => $v)
                               <li class="mr-2" role="daftar-harga">

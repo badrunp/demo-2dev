@@ -47,12 +47,14 @@
             <x-text-input id="pertanyaan" class="block mt-1 w-full" type="text" name="pertanyaan" :value="old('pertanyaan', $faq->pertanyaan)" autofocus/>
             <x-input-error :messages="$errors->get('pertanyaan')" class="mt-2" />
         </div>
-        
-       <div class="mb-4">
-                   <x-input-label for="jawaban" :value="__('Jawaban')" class="mb-2" />
-<textarea id="jawaban" rows="4" name="jawaban" class="block p-2.5 w-full text-sm text-slate-900 border-slate-300 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 focus:border-blue-500 dark:focus:border-blue-600 focus:ring-blue-500 dark:focus:ring-blue-600 rounded-md shadow-sm" placeholder="Tulis jawaban disini...">{{old("jawaban", $faq->jawaban)}}</textarea>
-            <x-input-error :messages="$errors->get('jawaban')" class="mt-2" />
+                      <div class="mb-4">
+                           <x-input-label for="jawaban" :value="__('Jawaban')" class="mb-2" />
+<textarea id="jawaban" name="jawaban">
+ {{old("jawaban", $faq->jawaban)}}
+</textarea>
+         <x-input-error :messages="$errors->get('jawaban')" />
        </div>
+
         
         <div class="flex items-center gap-2">
         <a href="{{route("faqs.index")}}" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 dark:focus:ring-yellow-900 flex justify-items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -66,5 +68,27 @@
 
         </div>
       </form>
-
+      @push("head")
+      <script src="https://cdn.tiny.cloud/1/rcgt62i5cc98uggo6wa96z7tm8g3kc9185jnnacta4fpycmz/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+      @endpush
+@push("script")
+<script>
+  tinymce.init({
+    selector: '#jawaban',
+    plugins: [
+      'advlist', 'autolink', 'link', 'lists', 'charmap', 'anchor', 'pagebreak',
+      'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+      'media', 'template',
+    ],
+    toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+      'bullist numlist outdent indent',
+    menu: {
+      favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+    },
+    menubar: 'favs file edit view insert format tools table help',
+    content_css: 'css/content.css'
+    
+  });
+</script>
+@endpush
 </x-app-layout>
