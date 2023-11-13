@@ -58,7 +58,7 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
        @foreach($products as $service)
-         <div class="p-4 bg-blue-700 rounded-lg">
+         <div class="p-4 bg-blue-700 border border-blue-800 rounded-lg">
             @if(false)
                     <image src="{{asset("storage/" . $service[0]->service->photo)}}" alt="{{$service[0]->service->name}}" class="w-8 h-8 rounded-full mb-2" />
                     @else
