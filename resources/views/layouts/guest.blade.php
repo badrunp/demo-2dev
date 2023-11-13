@@ -10,11 +10,11 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
            
-{{--            <script src="https://cdn.tailwindcss.com"></script>            --}}
-{{--              <script>         --}}
-{{--               tailwind.config = {          --}}
-{{--                darkMode: 'class'           --}}
-{{--              }         --}}
+{{--            <script src="https://cdn.tailwindcss.com"></script>             --}}
+{{--              <script>          --}}
+{{--               tailwind.config = {           --}}
+{{--                darkMode: 'class'            --}}
+{{--               }         --}}
 {{--            </script>        --}}
               @stack("head")
       <!-- Scripts -->
@@ -139,7 +139,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                      <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
                   </svg>
-                  <span>Masuk</span>
+                  <span>Login</span>
                </a>
                @if(Route::has("register"))
                <a href="{{route("register")}}" class="py-2 px-3 text-xs font-medium text-slate-900 focus:outline-none bg-white rounded-full border border-slate-200 hover:bg-slate-100 hover:text-blue-700 focus:z-10 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 text-center flex items-center justify-center  gap-2">
@@ -290,7 +290,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                            <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
                         </svg>
-                        <span>Masuk</span>
+                        <span>Login</span>
                      </a>
                   </li>
                                  @if(Route::has("register"))
@@ -338,7 +338,7 @@
             <h1 class="text-2xl font-bold text-slate-100">Butuh Bantuan?</h1>
             <p class="text-center text-sm leading-6  text-slate-200 tracking-wide">Jangan ragu untuk menghubungi kami setiap hari 24 jam.</p>
          </div>
-         <a href="{{route("kontak-kami")}}" class="text-slate-100 bg-teal-500 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-full px-6 py-2.5 text-center mr-2 mb-2 text-xs flex items-center gap-2"><span>Hubungi Kami</span>            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+         <a href="{{route("kontak-kami")}}" class="text-teal-800 bg-teal-400 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-full px-6 py-2.5 text-center mr-2 mb-2 text-xs flex items-center gap-2"><span>Hubungi Kami</span>            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
             </svg></a>
       </div>

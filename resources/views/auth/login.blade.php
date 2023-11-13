@@ -4,7 +4,11 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
     
-    <h1 class="text-2xl font-semibold mb-8">Masuk</h1>
+    <div class="mb-8">
+         <h1 class="text-2xl font-medium">Login</h1>
+         <p class="text-sm text-slate-700 dark:text-slate-400">Selamat datang kembali, masukkan kredensial Anda untuk melanjutkan.</p>
+    </div>
+
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -12,7 +16,7 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" autofocus autocomplete="username"/>
+            <x-text-input id="email" class="block mt-1 w-full bg-slate-50" type="email" name="email" :value="old('email')" autofocus autocomplete="username" placeholder="name@domain.com"/>
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -20,7 +24,7 @@
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <x-text-input id="password" class="block mt-1 w-full bg-slate-50"
                             type="password"
                             name="password"
                              autocomplete="current-password"/>
@@ -36,16 +40,8 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 rounded-full focus:outline-none" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
+        <div class="mt-4">
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full">Log in</button>
         </div>
     </form>
     </div>

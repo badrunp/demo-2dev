@@ -1,11 +1,11 @@
 <x-guest-layout>
-   <section class="relative min-h-[110vh] md:h-[700px] md:min-h-0 w-full flex items-center justify-center flex-col px-6 overflow-hidden bg-blue-700 dark:bg-transparent" id="jumbotron">
+   <section class="relative min-h-[115vh] md:h-[700px] md:min-h-0 w-full flex items-center justify-center flex-col px-6 overflow-hidden bg-blue-700 dark:bg-transparent" id="jumbotron">
       <div class="hidden dark:block w-[500px] md:w-[600px] lg:w-[800px] h-[500px] md:h-[800px] lg:w-[1000px] rounded-full bg-gradient-to-bl from-blue-600 to-transparent absolute top-0 -right-[200px] -z-10 blur-3xl opacity-20"></div>
-      <div class="flex gap-8 flex-col md:flex-row items-center max-w-4xl md:px-4">
+      <div class="flex gap-12 md:gap-8 flex-col md:flex-row items-center max-w-4xl md:px-4">
       <div class="flex flex-col justify-center items-center md:items-start gap-4 md:gap-6 sm:max-w-md md:max-w-lg">
-         <h1 id="jumbotron-title" class="text-4xl font-semibold text-center md:text-left text-slate-100">Kami Siap Membuat Website</span> Impian Anda</h1>
-         <p class="text-slate-200 dark:text-slate-400 text-center md:text-left">Kami hadir untuk membantu mewujudkan website impian Anda yang siap Go-Digital dari lokal hingga internasional</p>
-         <a href="{{route("harga")}}" class="w-max mt-2 text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 dark:hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm leading-6  px-10 py-3 text-center flex items-center gap-2 font-medium">
+         <h1 data-aos="fade-right" id="jumbotron-title" class="text-4xl font-semibold text-center md:text-left text-slate-100">Kami Siap Membuat <p class="typewrite inline-block text-teal-400 dark:text-blue-600" data-period="2000" data-type='[ "Website" ]'>Website</p> <br/>Impian Anda</h1>
+         <p data-aos="fade-down" data-aos-delay="200" class="text-slate-200 dark:text-slate-400 text-center md:text-left" >Kami hadir untuk membantu mewujudkan website impian Anda yang siap Go-Digital dari lokal hingga internasional</p>
+         <a data-aos="fade-up" data-aos-delay="400" href="{{route("harga")}}" class="w-max mt-2 text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 dark:hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm leading-6  px-10 py-3 text-center flex items-center gap-2 font-medium">
             <span>Lihat Harga</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -13,7 +13,7 @@
          </a>
          </div>
          
-         <img src="{{asset("images/hero.png")}}" alt="hero" class="w-[420px] lg:w-[520px]"/>
+         <img data-aos="fade-up" data-aos-delay="400" src="{{asset("images/hero.png")}}" alt="hero" class="w-[420px] lg:w-[520px]"/>
       </div>
       <div class="dark:hidden w-full h-[1px] bg-white bottom-0 left-0 absolute"></div>
          <div class="dark:hidden absolute bottom-0 left-0 w-full">
@@ -39,7 +39,7 @@
 
    <section class="py-16" id="tentang-kami">
       <div class=" flex flex-col gap-4 max-w-4xl mx-auto px-4">
-         <h1 class="tentang-kami-title text-2xl font-semibold text-center">Tentang Kami</h1>
+         <h1 class="tentang-kami-title text-2xl font-semibold text-center" >Tentang Kami</h1>
          <p class="text-sm leading-6  text-slate-700 dark:text-slate-400 leading-6">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman. Dengan bermodal pengetahuan dan jam terbang yang kami miliki, kami siap menjawab kebutuhan masyarakat terlebih untuk perusahaan dalam pembuatan website untuk kemajuan usahanya.</p>
          <a href="{{route("tentang-kami")}}" class="mt-2 w-max ml-auto md:ml-0 text-sm leading-6  font-medium text-blue-600 flex items-center gap-2 focus:underline hover:underline">
             <span>Selengkapnya</span>
@@ -223,5 +223,69 @@
    padding: 0 1.5rem !important;
   }
  </style>
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ @endpush
+ @push("script")
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>
+  AOS.init();
+   var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+
+    };
+          
+</script>
  @endpush
 </x-guest-layout>
