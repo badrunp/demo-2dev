@@ -1,6 +1,6 @@
 @props(["data" => []])
       @if(count($data) > 0)
-   <section class="relative {{ Request()->routeIs('tentang-kami') ? '' : 'bg-blue-700 py-10 md:py-24 lg:py-28'}} ">
+   <section class="relative {{ Request()->routeIs('tentang-kami') ? '' : 'bg-blue-700 py-10 md:py-24 lg:py-28'}} " data-aos="fade-up">
     @if(!Request()->routeIs('tentang-kami'))
         <x-water-effect position="bottom"/>
         <x-water-effect position="top"/>
@@ -8,6 +8,7 @@
 
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
       <div class="px-4 flex items-center flex-col gap-4">
+       <img src="{{ asset("images/icon/team.png") }}" alt="about" class="w-12 h-12 mx-auto"/> 
          <h1 class=" text-2xl font-semibold text-center {{ Request()->routeIs('tentang-kami') ? '' : 'text-slate-100' }}">Tim Kami</h1>
          <p class="max-w-lg text-center text-sm leading-6 {{ Request()->routeIs('tentang-kami') ? 'text-slate-700 dark:text-slate-400' : 'text-slate-200' }}">Dengan kondisi tim yang muda siap berkarya dan berpengalaman, kami siap sedia untuk membangun negeri menjadi lebih baik dan go-digital. Menyasar sektor bidang pasar secara menyeluruh.</p>
       </div>

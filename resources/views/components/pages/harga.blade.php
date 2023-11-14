@@ -1,7 +1,8 @@
 @props(["data" => []])
 @if(count($data) > 0)
- <section class="py-16 flex flex-col gap-8">
+ <section class="py-16 flex flex-col gap-8" data-aos="fade-up"> 
       <div class="flex flex-col items-center gap-4 max-w-4xl mx-auto px-4">
+        <img src="{{ asset("images/icon/price.png") }}" alt="about" class="w-12 h-12 mx-auto"/>
          <h1 class="text-2xl font-semibold text-center">Daftar Harga Paket Website</h1>
          <span class="text-center text-sm text-slate-700 dark:text-slate-400 max-w-lg leading-6">Pilih paket pembuatan website yang sesuai dengan kebutuhan anda.</span>
       </div>

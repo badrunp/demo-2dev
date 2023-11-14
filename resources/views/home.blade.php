@@ -38,8 +38,9 @@
    </section>
 
    <section class="py-16" id="tentang-kami">
-      <div class=" flex flex-col gap-4 max-w-4xl mx-auto px-4">
-         <h1 class="tentang-kami-title text-2xl font-semibold text-center" >Tentang Kami</h1>
+      <div data-aos="fade-up" class=" flex flex-col gap-4 max-w-4xl mx-auto px-4">
+       <img src="{{ asset("images/icon/about.png") }}" alt="about" class="w-12 h-12 mx-auto"/>
+         <h1 class="tentang-kami-title text-2xl font-semibold text-center">Tentang Kami</h1>
          <p class="text-sm leading-6  text-slate-700 dark:text-slate-400 leading-6">Duos Dev adalah brand usaha kami di bidang IT yang berlokasi di Cikijing - Majalengka dan memberikan layanan profesional dibekali tenaga ahli yang berpengalaman. Dengan bermodal pengetahuan dan jam terbang yang kami miliki, kami siap menjawab kebutuhan masyarakat terlebih untuk perusahaan dalam pembuatan website untuk kemajuan usahanya.</p>
          <a href="{{route("tentang-kami")}}" class="mt-2 w-max ml-auto md:ml-0 text-sm leading-6  font-medium text-blue-600 flex items-center gap-2 focus:underline hover:underline">
             <span>Selengkapnya</span>
@@ -52,17 +53,20 @@
    
    @if(count($products) > 0)
    <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="layanan-kami">
-      <div class="flex flex-col items-start gap-4">
+      <div class="flex flex-col items-start gap-4" data-aos="fade-right">
+        <img src="{{ asset("images/icon/service.png") }}" alt="about" class="w-12 h-12"/>
          <h1 class="text-2xl font-semibold">Layanan Kami</h1>
          <span class="text-sm leading-6  text-slate-700 dark:text-slate-400 leading-6">Mau membuat website apa? Duos Dev solusi lengkap dalam pembuatan website untuk perusahaan atau perorangan, dengan tampilan yang responsive, serta layanan marketing untuk website Anda.</span>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-       @foreach($products as $service)
-         <div class="p-4 bg-blue-700 border border-blue-800 rounded-lg">
+       @php $count = -1 @endphp
+       @foreach($products as $key => $service)
+       @php $count++ @endphp
+         <div class="p-4 bg-blue-700 border border-blue-800 rounded-lg" data-aos="fade-up" data-aos-delay="{{ $count}}">
             @if(false)
-                    <image src="{{asset("storage/" . $service[0]->service->photo)}}" alt="{{$service[0]->service->name}}" class="w-8 h-8 rounded-full mb-2" />
+                    <image src="{{asset("storage/" . $service[0]->service->photo)}}" alt="{{$service[0]->service->name}}" class="w-8 h-8 rounded-full mb-4" />
                     @else
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 mb-2 text-slate-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 mb-4 text-slate-100">
   <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
 </svg>
 
@@ -82,7 +86,7 @@
             <x-water-effect position="bottom"/>
         <x-water-effect position="top"/>
       <div class="px-4 py-16 flex flex-col gap-4 overflow-x-hidden max-w-4xl mx-auto">
-         <div class="relative">
+         <div class="relative" data-aos="fade-left">
             <div class="translate-x-4 sm:translate-x-16">
                <img
                   src="{{asset('/images/big-centered.png')}}"
@@ -98,7 +102,7 @@
                   />
             </div>
          </div>
-         <div class="max-w-xl relative">
+         <div class="max-w-xl relative" data-aos="fade-right" >
             <h1 class="text-2xl sm:text-6xl font-bold text-slate-100">
                Proses Cepat <br /> Dan Hasil Berkualitas
             </h1>
@@ -111,12 +115,13 @@
       </div>
    </section>
    @if(count($benefits) > 0)
-   <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="benefit">
+   <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="benefit" data-aos="fade-up">
+     <img src="{{ asset("images/icon/benefit.png") }}" alt="about" class="w-12 h-12 mx-auto"/>
       <h1 class="text-2xl font-semibold text-center">Kenapa Menggunakan <br/> Jasa Duos Dev</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
        @foreach($benefits as $benefit)
          <div class="block p-6  bg-white border border-slate-200 rounded-lg shadow  dark:bg-slate-800 dark:border-slate-700 flex flex-col items-center gap-2">
-         <div class="text-slate-100 bg-blue-700 rounded-full p-2.5">
+         <div class="mb-4 text-slate-100 bg-blue-700 rounded-full p-2.5">
                         {!! $benefit->icon !!}
          </div>
 
@@ -131,11 +136,12 @@
    @endif
    
    @if(count($testimonis) >= 2)
-   <section class=" bg-blue-700 relative py-10 md:py-24 lg:py-28" id="testimoni">
+   <section class=" bg-blue-700 relative py-10 md:py-24 lg:py-28" id="testimoni" data-aos="fade-up" >
                 <x-water-effect position="bottom"/>
         <x-water-effect position="top"/>
       <div class="px-4 py-16 flex flex-col gap-12 max-w-4xl mx-auto">
          <div class="flex items-center flex-col gap-4">
+           <img src="{{ asset("images/icon/testimoni.png") }}" alt="about" class="w-12 h-12 mx-auto"/>
             <h1 class="text-2xl font-semibold text-center text-slate-100">Testimoni Dari Klien</h1>
             <p class="text-center text-sm leading-6  text-slate-200 max-w-lg opacity-80">Beberapa testimoni dari klien yang sudah menggunakan jasa kami.</p>
          </div>
@@ -194,6 +200,7 @@
 @if(count($faqs) > 0)
    <section class="px-4 py-16 flex flex-col gap-8 max-w-4xl mx-auto" id="faq">
       <div class="px-4 flex items-center flex-col gap-4">
+        <img src="{{ asset("images/icon/faq.png") }}" alt="about" class="w-12 h-12 mx-auto"/>
          <h1 class="text-2xl font-semibold text-center">FAQ</h1>
          <p class="text-center text-sm leading-6  text-slate-700 dark:text-slate-400 max-w-lg">Ini adalah pertanyaan yang sering ditanyakan kepada kami.</p>
       </div>

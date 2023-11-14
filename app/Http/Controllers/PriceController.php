@@ -17,6 +17,7 @@ class PriceController extends Controller
         "packet:id,name,desc",
         "features",
       ])
+                  ->orderBy("created_at", "desc")
         ->where("status", "published")
         ->get()
         ->groupBy("service.name"),

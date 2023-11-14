@@ -332,12 +332,13 @@
       @if(!Request()->routeIs("kontak-kami"))
      <section class="relative bg-blue-700 pt-10 md:pt-24 lg:pt-28">
 <x-water-effect/>
-      <div class="flex items-center flex-col justify-center gap-6 py-8 px-6">
+      <div class="flex items-center flex-col justify-center gap-8 py-8 px-6">
          <div class="flex flex-col items-center justify-center text-slate-100 gap-1">
+           <img src="{{ asset("images/icon/contact.png") }}" alt="about" class="w-12 h-12 mx-auto"/>
             <h1 class="text-2xl font-bold text-slate-100">Butuh Bantuan?</h1>
             <p class="text-center text-sm leading-6  text-slate-200 tracking-wide">Jangan ragu untuk menghubungi kami setiap hari 24 jam.</p>
          </div>
-         <a href="{{route("kontak-kami")}}" class="text-teal-800 bg-teal-400 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-full px-6 py-2.5 text-center mr-2 mb-2 text-xs flex items-center gap-2"><span>Hubungi Kami</span>            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+         <a href="{{route("kontak-kami")}}" class="text-teal-800 bg-teal-400 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-full px-8 py-3 text-center mr-2 mb-2 text-xs flex items-center gap-2"><span>Hubungi Kami</span>            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
             </svg></a>
       </div>
