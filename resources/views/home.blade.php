@@ -58,11 +58,11 @@
          <h1 class="text-2xl font-semibold">Layanan Kami</h1>
          <span class="text-sm leading-6  text-slate-700 dark:text-slate-400 leading-6">Mau membuat website apa? Duos Dev solusi lengkap dalam pembuatan website untuk perusahaan atau perorangan, dengan tampilan yang responsive, serta layanan marketing untuk website Anda.</span>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
        @php $count = -1 @endphp
        @foreach($products as $key => $service)
        @php $count++ @endphp
-         <div class="p-4 bg-blue-700 border border-blue-800 rounded-lg" data-aos="fade-up" data-aos-delay="{{ $count}}">
+         <div class="p-4 bg-blue-700 border border-blue-800 rounded-lg" data-aos="fade-up" data-aos-delay="{{ $count * 100}}">
             @if(false)
                     <image src="{{asset("storage/" . $service[0]->service->photo)}}" alt="{{$service[0]->service->name}}" class="w-8 h-8 rounded-full mb-4" />
                     @else
