@@ -38,7 +38,6 @@ class HomeController extends Controller
         "message",
       ])
         ->orderBy("id", "desc")
-        ->limit(6)
         ->get(),
       "teams" => Team::with(
         "user:id,name,photo,jabatan,email,github_url,linkedin_url"
@@ -46,14 +45,13 @@ class HomeController extends Controller
         ->select("status", "user_id")
         ->where("status", "active")
         ->get(),
-      "faqs" => Faq::select(["pertanyaan", "jawaban"])
-        ->get(),
+      "faqs" => Faq::select(["pertanyaan", "jawaban"])->get(),
       "articles" => Article::where("status", true)
-            ->orderBy("created_at", "desc")
+        ->orderBy("created_at", "desc")
         ->limit(6)
         ->get(),
       "projects" => Project::with(["type:id,name"])
-            ->orderBy("created_at", "desc")
+        ->orderBy("created_at", "desc")
         ->where("status", true)
         ->limit(6)
         ->get()

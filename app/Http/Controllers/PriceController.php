@@ -6,22 +6,22 @@ use Illuminate\Http\Request;
 
 class PriceController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
-    public function __invoke(Request $request)
-    {
-        $data = [
+  /**
+   * Handle the incoming request.
+   */
+  public function __invoke(Request $request)
+  {
+    $data = [
       "products" => Product::with([
         "service:id,name,desc,photo",
         "packet:id,name,desc",
         "features",
       ])
-                  ->orderBy("created_at", "desc")
         ->where("status", "published")
+        ->orderBy("created_at", "desc")
         ->get()
         ->groupBy("service.name"),
     ];
     return view("harga", $data);
-    }
+  }
 }
