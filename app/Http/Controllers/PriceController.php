@@ -18,7 +18,7 @@ class PriceController extends Controller
         "features",
       ])
         ->where("status", "published")
-        ->orderBy("created_at", "desc")
+        ->orderBy("price", "asc")
         ->get()
         ->groupBy("service.name"),
     ];

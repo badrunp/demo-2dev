@@ -45,7 +45,7 @@
     </div>
         <div class="flex flex-col pb-3">
         <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Jawaban</dt>
-        <dd class="text-base font-semibold">{{$faq->jawaban ? $faq->jawaban : "-"}}</dd>
+        <dd class="text-base font-semibold">{!! $faq->jawaban ? $faq->jawaban : "-" !!}</dd>
     </div>
         <div class="flex flex-col pb-3">
         <dt class="mb-1 text-gray-500 text-sm mt-3 dark:text-gray-400">Dibuat Pada</dt>

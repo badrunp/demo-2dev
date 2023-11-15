@@ -7,7 +7,7 @@
          <span class="text-center text-sm text-slate-700 dark:text-slate-400 max-w-lg leading-6">Pilih paket pembuatan website yang sesuai dengan kebutuhan anda.</span>
       </div>
       <div>
-         <div class="mb-4 border-b border-slate-200 dark:border-slate-700 max-w-4xl mx-auto px-4">
+         <div class="mb-4 border-b border-slate-200 dark:border-slate-700 max-w-4xl mx-auto">
             <ul class="hide-scroll flex flex-nowrap -mb-px text-sm font-medium text-center overflow-x-scroll list-none" style="padding: 0 !important" id="daftar-harga" data-tabs-toggle="#daftar-harga-tabs" role="tablist">
              
                @foreach($data as $index => $v)
@@ -30,7 +30,9 @@
               
               @endphp
                   <div @class([
-                  'snap-start flex-none scroll-mx-4 w-full max-w-sm pb-4 pt-6 px-8 rounded-lg shadow relative',
+                  "max-w-xs sm:max-w-sm" => count($v2) > 1,
+                  "max-w-sm" => count($v2) == 1,
+                  'snap-start flex-none scroll-mx-4 w-full pb-4 pt-6 px-8 rounded-lg shadow relative',
                   'border-2 border-blue-500 dark:border-slate-700 bg-blue-100 text-slate-900' => $item->banner == "terlaris",
                   'border bg-white  border-slate-200 dark:border-slate-700 dark:bg-slate-800' => $item->banner != "terlaris"
                   ])>
@@ -59,7 +61,7 @@
                         <span class="text-3xl font-medium">Rp</span>
                         <span class="text-5xl font-semibold tracking-tight">@currency($finalPrice)</span>
                      </div>
-                     <a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev,%20Saya%20Mau%20order%20jasa%20pembuatan%20web%20{{$item->service->name}}%20dengan%20{{$item->packet->name}}.%20Mohon%20infonya%20lebih%20lanjut." target="_blank" class="mb-2 text-slate-100 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Info Lebih Lanjut</a>
+                     <a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev,%20Saya%20Mau%20order%20jasa%20pembuatan%20{{$item->service->name}}%20dengan%20{{$item->packet->name}}.%20Mohon%20infonya%20lebih%20lanjut." target="_blank" class="mb-2 text-slate-100 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Info Lebih Lanjut</a>
                      <ul role="list" class="space-y-5 my-7 list-none" style="padding: 0 !important">
                       
                       @foreach($item->features as $feature)
@@ -74,7 +76,7 @@
                            </div>
                        
                         @if($feature->desc)
-                                                   <button data-tooltip-target="tooltip-right-{{$feature->id}}-{{Str::slug($index2)}}" data-tooltip-placement="right" type="button" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                   <button data-tooltip-target="tooltip-right-{{$feature->id}}-{{Str::slug($index2)}}" data-tooltip-placement="right" type="button" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 truncate">
   <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 01-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 01-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 01-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584zM12 18a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
 </svg>
 </button>

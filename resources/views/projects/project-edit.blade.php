@@ -4,7 +4,7 @@
 <!-- Breadcrumb -->
 
 <nav class="flex mb-8" aria-label="Breadcrumb">
-  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+  <ol class="inline-flex items-center space-x-1 md:space-x-3 list-none">
     <li class="list-none inline-flex items-center">
       <a href="{{ route("dashboard")}}" class="inline-flex items-center text-sm font-medium text-slate-700 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white">
         <svg class="w-3 h-3 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

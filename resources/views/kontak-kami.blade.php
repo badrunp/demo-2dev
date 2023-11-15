@@ -43,7 +43,7 @@
 
 
   <div class="flex flex-col">
-  <h4 class="font-medium">WhatApp</h4>
+  <h4 class="font-medium">WhatsApp</h4>
   <a href="https://api.whatsapp.com/send?phone=6285721557240&text=Halo%20Duos%20Dev" class="text-sm text-slate-700 dark:text-slate-400">+6285721557240</a>
   </div>
   </div>
